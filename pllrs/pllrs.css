@@ -1,0 +1,317 @@
+/**
+ *  @file: ghostr/_base.scss
+ */
+/** 
+ *  2 COLUMN GRID
+ *  =============
+ *  _column2 ____ [x] (2222)
+ *  _column2 _1__ [x] (2111)
+ *  _column2 __1_ [x] (2211)
+ *  _column2      [x] (2221)
+ *  
+ *  3 COLUMN GRID
+ *  =============
+ *  _column3 ____ [x] (3333)
+ *  _column3 _1__ [x] (3111)
+ *  _column3 __1_ [x] (3311)
+ *  _column3      [x] (3331)
+ *  
+ *  4 COLUMN GRID
+ *  =============
+ *  _column4 ____ [x] (4444)
+ *  _column4 _1__ [x] (4111)
+ *  _column4 __1_ [x] (4411)
+ *  _column4      [x] (4441)
+ *  
+ *  5 COLUMN GRID
+ *  =============
+ *  _column5 ____ [x] (5555)
+ *  _column5 _1__ [x] (5111)
+ *  _column5 __1_ [x] (5511)
+ *  _column5      [x] (5551)
+ *  
+ *  6 COLUMN GRID
+ *  =============
+ *  _column6 ____ [x] (6666)
+ *  _column6 _1__ [x] (6111)
+ *  _column6 __1_ [x] (6611)
+ *  _column6      [x] (6661)
+ *  
+ *  More to Come
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+._col6, ._column6,
+._col5, ._column5,
+._col4, ._column4,
+._col3, ._column3,
+._col2, ._column2,
+._col, ._column {
+  float: left;
+  position: relative;
+  width: 100%; }
+  ._col6 > .column, ._col6 > .col, ._column6 > .column, ._column6 > .col,
+  ._col5 > .column,
+  ._col5 > .col, ._column5 > .column, ._column5 > .col,
+  ._col4 > .column,
+  ._col4 > .col, ._column4 > .column, ._column4 > .col,
+  ._col3 > .column,
+  ._col3 > .col, ._column3 > .column, ._column3 > .col,
+  ._col2 > .column,
+  ._col2 > .col, ._column2 > .column, ._column2 > .col,
+  ._col > .column,
+  ._col > .col, ._column > .column, ._column > .col {
+    float: left;
+    position: relative;
+    width: 100%; }
+
+/**
+ *  2 Column
+ */
+._col2.____ > .column, ._col2.____ > .col, ._column2.____ > .column, ._column2.____ > .col {
+  width: 48%;
+  margin-right: 4%; }
+  ._col2.____ > .column:nth-child(2n), ._col2.____ > .col:nth-child(2n), ._column2.____ > .column:nth-child(2n), ._column2.____ > .col:nth-child(2n) {
+    clear: both; }
+  ._col2.____ > .column:nth-child(2n+1), ._col2.____ > .col:nth-child(2n+1), ._column2.____ > .column:nth-child(2n+1), ._column2.____ > .col:nth-child(2n+1) {
+    margin-right: 0; }
+
+/**
+ * 3 Column
+ */
+._col3.____ > .column, ._col3.____ > .col, ._column3.____ > .column, ._column3.____ > .col {
+  width: 30.66667%;
+  margin-right: 4%; }
+  ._col3.____ > .column:nth-child(3n+1), ._col3.____ > .col:nth-child(3n+1), ._column3.____ > .column:nth-child(3n+1), ._column3.____ > .col:nth-child(3n+1) {
+    margin-right: 0; }
+  ._col3.____ > .column:nth-child(3n+2), ._col3.____ > .col:nth-child(3n+2), ._column3.____ > .column:nth-child(3n+2), ._column3.____ > .col:nth-child(3n+2) {
+    clear: both; }
+
+/**
+ * 4 Column
+ */
+._col4.____ > .column, ._col4.____ > .col, ._column4.____ > .column, ._column4.____ > .col {
+  width: 22%;
+  margin-right: 4%; }
+  ._col4.____ > .column:nth-child(4n+1), ._col4.____ > .col:nth-child(4n+1), ._column4.____ > .column:nth-child(4n+1), ._column4.____ > .col:nth-child(4n+1) {
+    margin-right: 0; }
+  ._col4.____ > .column:nth-child(4n+2), ._col4.____ > .col:nth-child(4n+2), ._column4.____ > .column:nth-child(4n+2), ._column4.____ > .col:nth-child(4n+2) {
+    clear: both; }
+
+/**
+ * 5 Column
+ */
+._col5.____ > .column, ._col5.____ > .col, ._column5.____ > .column, ._column5.____ > .col {
+  width: 16.8%;
+  margin-right: 4%; }
+  ._col5.____ > .column:nth-child(5n+1), ._col5.____ > .col:nth-child(5n+1), ._column5.____ > .column:nth-child(5n+1), ._column5.____ > .col:nth-child(5n+1) {
+    margin-right: 0; }
+  ._col5.____ > .column:nth-child(5n+2), ._col5.____ > .col:nth-child(5n+2), ._column5.____ > .column:nth-child(5n+2), ._column5.____ > .col:nth-child(5n+2) {
+    clear: both; }
+
+/**
+ * 6 Column
+ */
+._col6.____ > .column, ._col6.____ > .col, ._column6.____ > .column, ._column6.____ > .col {
+  width: 13.33333%;
+  margin-right: 4%; }
+  ._col6.____ > .column:nth-child(6n+1), ._col6.____ > .col:nth-child(6n+1), ._column6.____ > .column:nth-child(6n+1), ._column6.____ > .col:nth-child(6n+1) {
+    margin-right: 0; }
+  ._col6.____ > .column:nth-child(6n+2), ._col6.____ > .col:nth-child(6n+2), ._column6.____ > .column:nth-child(6n+2), ._column6.____ > .col:nth-child(6n+2) {
+    clear: both; }
+
+@media screen and (min-width: 600px) {
+  /**
+   *  @file: ghostr/_tablet.scss
+   */
+  /**
+   * 2 Column
+   */
+  ._col2._1__ > .column, ._col2._1__ > .col, ._col2.__1_ > .column, ._col2.__1_ > .col, ._column2._1__ > .column, ._column2._1__ > .col, ._column2.__1_ > .column, ._column2.__1_ > .col {
+    width: 100%;
+    margin-right: 0; }
+  ._col2 > .column, ._col2 > .col, ._column2 > .column, ._column2 > .col {
+    width: 48%;
+    margin-right: 4%; }
+    ._col2 > .column:nth-child(2n+1), ._col2 > .col:nth-child(2n+1), ._column2 > .column:nth-child(2n+1), ._column2 > .col:nth-child(2n+1) {
+      clear: none;
+      margin-right: 0; }
+
+  /**
+   * 3 Column
+   */
+  ._col3.__1_ > .column, ._col3.__1_ > .col, ._col3._1__ > .column, ._col3._1__ > .col, ._column3.__1_ > .column, ._column3.__1_ > .col, ._column3._1__ > .column, ._column3._1__ > .col {
+    width: 100%;
+    margin-right: 0; }
+  ._col3 > .column, ._col3 > .col, ._column3 > .column, ._column3 > .col {
+    width: 30.66667%;
+    margin-right: 4%; }
+    ._col3 > .column:nth-child(3n+1), ._col3 > .col:nth-child(3n+1), ._column3 > .column:nth-child(3n+1), ._column3 > .col:nth-child(3n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col3 > .column:nth-child(3n+2), ._col3 > .col:nth-child(3n+2), ._column3 > .column:nth-child(3n+2), ._column3 > .col:nth-child(3n+2) {
+      clear: both; }
+
+  /**
+   * 4 Column
+   */
+  ._col4.__1_ > .column, ._col4.__1_ > .col, ._col4._1__ > .column, ._col4._1__ > .col, ._column4.__1_ > .column, ._column4.__1_ > .col, ._column4._1__ > .column, ._column4._1__ > .col {
+    width: 100%;
+    margin-right: 0; }
+  ._col4 > .column, ._col4 > .col, ._column4 > .column, ._column4 > .col {
+    width: 22%;
+    margin-right: 4%; }
+    ._col4 > .column:nth-child(4n+1), ._col4 > .col:nth-child(4n+1), ._column4 > .column:nth-child(4n+1), ._column4 > .col:nth-child(4n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col4 > .column:nth-child(4n+2), ._col4 > .col:nth-child(4n+2), ._column4 > .column:nth-child(4n+2), ._column4 > .col:nth-child(4n+2) {
+      clear: both; }
+
+  /**
+   * 5 Column
+   */
+  ._col5.__1_ > .column, ._col5.__1_ > .col, ._col5._1__ > .column, ._col5._1__ > .col, ._column5.__1_ > .column, ._column5.__1_ > .col, ._column5._1__ > .column, ._column5._1__ > .col {
+    width: 100%;
+    margin-right: 0; }
+  ._col5 > .column, ._col5 > .col, ._column5 > .column, ._column5 > .col {
+    width: 16.8%;
+    margin-right: 4%; }
+    ._col5 > .column:nth-child(5n+1), ._col5 > .col:nth-child(5n+1), ._column5 > .column:nth-child(5n+1), ._column5 > .col:nth-child(5n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col5 > .column:nth-child(5n+2), ._col5 > .col:nth-child(5n+2), ._column5 > .column:nth-child(5n+2), ._column5 > .col:nth-child(5n+2) {
+      clear: both; }
+
+  /**
+   * 6 Column
+   */
+  ._col6.__1_ > .column, ._col6.__1_ > .col, ._col6._1__ > .column, ._col6._1__ > .col, ._column6.__1_ > .column, ._column6.__1_ > .col, ._column6._1__ > .column, ._column6._1__ > .col {
+    width: 100%;
+    margin-right: 0; }
+  ._col6 > .column, ._col6 > .col, ._column6 > .column, ._column6 > .col {
+    width: 13.33333%;
+    margin-right: 4%; }
+    ._col6 > .column:nth-child(6n+1), ._col6 > .col:nth-child(6n+1), ._column6 > .column:nth-child(6n+1), ._column6 > .col:nth-child(6n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col6 > .column:nth-child(6n+2), ._col6 > .col:nth-child(6n+2), ._column6 > .column:nth-child(6n+2), ._column6 > .col:nth-child(6n+2) {
+      clear: both; } }
+@media screen and (min-width: 768px) {
+  /**
+   *  @file: ghostr/_large_tablet.scss
+   */
+  /**
+   * 2 Column
+   */
+  ._col2.__1_ > .col, ._col2.__1_ > .column, ._column2.__1_ > .col, ._column2.__1_ > .column {
+    width: 48%; }
+    ._col2.__1_ > .col:nth-child(2n), ._col2.__1_ > .column:nth-child(2n), ._column2.__1_ > .col:nth-child(2n), ._column2.__1_ > .column:nth-child(2n) {
+      margin-right: 4%;
+      clear: both; }
+
+  /**
+   * 3 Column
+   */
+  ._col3.__1_ > .col, ._col3.__1_ > .column, ._column3.__1_ > .col, ._column3.__1_ > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    ._col3.__1_ > .col:nth-child(3n+1), ._col3.__1_ > .column:nth-child(3n+1), ._column3.__1_ > .col:nth-child(3n+1), ._column3.__1_ > .column:nth-child(3n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col3.__1_ > .col:nth-child(3n+2), ._col3.__1_ > .column:nth-child(3n+2), ._column3.__1_ > .col:nth-child(3n+2), ._column3.__1_ > .column:nth-child(3n+2) {
+      clear: both; }
+
+  /**
+   * 4 Column
+   */
+  ._col4.__1_ > .col, ._col4.__1_ > .column, ._column4.__1_ > .col, ._column4.__1_ > .column {
+    width: 22%;
+    margin-right: 4%; }
+    ._col4.__1_ > .col:nth-child(4n+1), ._col4.__1_ > .column:nth-child(4n+1), ._column4.__1_ > .col:nth-child(4n+1), ._column4.__1_ > .column:nth-child(4n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col4.__1_ > .col:nth-child(4n+2), ._col4.__1_ > .column:nth-child(4n+2), ._column4.__1_ > .col:nth-child(4n+2), ._column4.__1_ > .column:nth-child(4n+2) {
+      clear: both; }
+
+  /**
+   * 5 Column
+   */
+  ._col5.__1_ > .col, ._col5.__1_ > .column, ._column5.__1_ > .col, ._column5.__1_ > .column {
+    width: 16.8%;
+    margin-right: 4%; }
+    ._col5.__1_ > .col:nth-child(5n+1), ._col5.__1_ > .column:nth-child(5n+1), ._column5.__1_ > .col:nth-child(5n+1), ._column5.__1_ > .column:nth-child(5n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col5.__1_ > .col:nth-child(5n+2), ._col5.__1_ > .column:nth-child(5n+2), ._column5.__1_ > .col:nth-child(5n+2), ._column5.__1_ > .column:nth-child(5n+2) {
+      clear: both; }
+
+  /**
+   * 6 Column
+   */
+  ._col6.__1_ > .col, ._col6.__1_ > .column, ._column6.__1_ > .col, ._column6.__1_ > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    ._col6.__1_ > .col:nth-child(6n+1), ._col6.__1_ > .column:nth-child(6n+1), ._column6.__1_ > .col:nth-child(6n+1), ._column6.__1_ > .column:nth-child(6n+1) {
+      clear: none;
+      margin-right: 0; }
+    ._col6.__1_ > .col:nth-child(6n+2), ._col6.__1_ > .column:nth-child(6n+2), ._column6.__1_ > .col:nth-child(6n+2), ._column6.__1_ > .column:nth-child(6n+2) {
+      clear: both; } }
+@media screen and (min-width: 1000px) {
+  /**
+   *  @file: ghostr/_desktop.scss
+   */
+  /**
+   * 2 Column
+   */
+  ._col2._1__ > .column, ._col2._1__ > .col, ._column2._1__ > .column, ._column2._1__ > .col {
+    width: 48%; }
+    ._col2._1__ > .column:nth-child(2n), ._col2._1__ > .col:nth-child(2n), ._column2._1__ > .column:nth-child(2n), ._column2._1__ > .col:nth-child(2n) {
+      margin-right: 4%;
+      clear: both; }
+
+  /**
+   * 3 Column
+   */
+  ._col3._1__ > .column, ._col3._1__ > .col, ._column3._1__ > .column, ._column3._1__ > .col {
+    width: 30.66667%;
+    margin-right: 4%; }
+    ._col3._1__ > .column:nth-child(3n+1), ._col3._1__ > .col:nth-child(3n+1), ._column3._1__ > .column:nth-child(3n+1), ._column3._1__ > .col:nth-child(3n+1) {
+      margin-right: 0; }
+    ._col3._1__ > .column:nth-child(3n+2), ._col3._1__ > .col:nth-child(3n+2), ._column3._1__ > .column:nth-child(3n+2), ._column3._1__ > .col:nth-child(3n+2) {
+      clear: both; }
+
+  /**
+   * 4 Column
+   */
+  ._col4._1__ > .column, ._col4._1__ > .col, ._column4._1__ > .column, ._column4._1__ > .col {
+    width: 22%;
+    margin-right: 4%; }
+    ._col4._1__ > .column:nth-child(4n+1), ._col4._1__ > .col:nth-child(4n+1), ._column4._1__ > .column:nth-child(4n+1), ._column4._1__ > .col:nth-child(4n+1) {
+      margin-right: 0; }
+    ._col4._1__ > .column:nth-child(4n+2), ._col4._1__ > .col:nth-child(4n+2), ._column4._1__ > .column:nth-child(4n+2), ._column4._1__ > .col:nth-child(4n+2) {
+      clear: both; }
+
+  /**
+   * 5 Column
+   */
+  ._col5._1__ > .column, ._col5._1__ > .col, ._column5._1__ > .column, ._column5._1__ > .col {
+    width: 16.8%;
+    margin-right: 4%; }
+    ._col5._1__ > .column:nth-child(5n+1), ._col5._1__ > .col:nth-child(5n+1), ._column5._1__ > .column:nth-child(5n+1), ._column5._1__ > .col:nth-child(5n+1) {
+      margin-right: 0; }
+    ._col5._1__ > .column:nth-child(5n+2), ._col5._1__ > .col:nth-child(5n+2), ._column5._1__ > .column:nth-child(5n+2), ._column5._1__ > .col:nth-child(5n+2) {
+      clear: both; }
+
+  /**
+   * 6 Column
+   */
+  ._col6._1__ > .column, ._col6._1__ > .col, ._column6._1__ > .column, ._column6._1__ > .col {
+    width: 13.33333%;
+    margin-right: 4%; }
+    ._col6._1__ > .column:nth-child(6n+1), ._col6._1__ > .col:nth-child(6n+1), ._column6._1__ > .column:nth-child(6n+1), ._column6._1__ > .col:nth-child(6n+1) {
+      margin-right: 0; }
+    ._col6._1__ > .column:nth-child(6n+2), ._col6._1__ > .col:nth-child(6n+2), ._column6._1__ > .column:nth-child(6n+2), ._column6._1__ > .col:nth-child(6n+2) {
+      clear: both; } }
