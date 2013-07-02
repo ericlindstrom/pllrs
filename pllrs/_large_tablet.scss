@@ -69,3 +69,31 @@
     }
   }
 }
+
+/**
+ * 7 Column
+ */
+._col7, ._column7 {
+  &.__1_ {
+    &> .col, &> .column {
+      width: (100% - $gutter*6)*(1/7);
+      margin-right:$gutter;
+      &:nth-child(7n+1) { clear:none; margin-right:0; }
+      &:nth-child(7n+2) { clear:both; }
+    }
+  }
+}
+
+/**
+ * 8 Column
+ */
+._col8, ._column8 {
+  &.__1_ {
+    &> .col, &> .column {
+      width: (100% - $gutter*7)*(1/8);
+      margin-right:$gutter;
+      &:nth-child(8n+1) { clear:none; margin-right:0; }
+      &:nth-child(8n+2) { clear:both; }
+    }
+  }
+}

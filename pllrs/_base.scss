@@ -38,6 +38,14 @@
  *  _column6 __1_ [x] (6611)
  *  _column6      [x] (6661)
  *  
+ *  7 COLUMN GRID
+ *  =============
+ *  _column7 ____ [x] (7777)
+ *  _column7 _1__ [x] (7111)
+ *  _column7 __1_ [x] (7711)
+ *  _column7      [x] (7771)
+ *  
+
  *  More to Come
  */
 
@@ -54,6 +62,15 @@ $gutter: 4%;
   width: $width;
 }
 
+//@mixin _content($number) {
+//  width:(100% - ($gutter*(#{$number} - 1))) * (1 / #{$number});
+//  margin-right:$gutter;
+//  &:nth-child(#{$number}n) { clear:both; }
+//  &:nth-child(#{$number}n+1) { margin-right:0; }
+//}
+
+._col8, ._column8,
+._col7, ._column7,
 ._col6, ._column6, 
 ._col5, ._column5, 
 ._col4, ._column4, 
@@ -143,6 +160,37 @@ $gutter: 4%;
       margin-right:$gutter;
       &:nth-child(6n+1) { margin-right:0; }
       &:nth-child(6n+2) { clear:both; }
+    }
+  }
+}
+
+
+/**
+ * 7 Column
+ */
+._col7, ._column7 {
+  //&._777, &._7__
+  &.____ { 
+    &>.column, &>.col {
+      width:(100% - $gutter*6) *(1/7);
+      margin-right:$gutter;
+      &:nth-child(7n+1) { margin-right:0; }
+      &:nth-child(7n+2) { clear:both; }
+    }
+  }
+}
+
+/**
+ * 8 Column
+ */
+._col8, ._column8 {
+  //&._888, &._8__
+  &.____ { 
+    &>.column, &>.col {
+      width:(100% - $gutter*7) *(1/8);
+      margin-right:$gutter;
+      &:nth-child(8n+1) { margin-right:0; }
+      &:nth-child(8n+2) { clear:both; }
     }
   }
 }
