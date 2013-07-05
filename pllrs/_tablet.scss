@@ -19,7 +19,9 @@
   &> .column, &> .col {
     width: (100% - $gutter) *.5;
     margin-right:$gutter;
-    &:nth-child(2n+1) { clear:none; margin-right:0; }
+
+    &:nth-of-type(2n) { margin-right:0; }
+    &:nth-of-type(2n+1) { clear:both; }
   }
 } // end of 2 column grid
 
@@ -35,11 +37,11 @@
     }
   }
 
-  &> .column, &> .col {
+  &>.column, &>.col {
     width: (100% - $gutter*2) *.3333334;
     margin-right:$gutter;
-    &:nth-child(3n+1) { clear:none; margin-right:0; }
-    &:nth-child(3n+2) { clear:both; }
+    &:nth-of-type(3n) { clear:none; margin-right:0; }
+    &:nth-of-type(3n+1) {  }
   }
 }
 
@@ -57,8 +59,8 @@
   &> .column, &> .col {
     width: (100% - $gutter*3) *.25;
     margin-right:$gutter;
-    &:nth-child(4n+1) { clear:none; margin-right:0; }
-    &:nth-child(4n+2) { clear:both; }
+    &:nth-of-type(4n) { margin-right:0; }
+    &:nth-of-type(4n+1) { clear:both; }
   }
 }
 
@@ -76,8 +78,8 @@
   &> .column, &> .col {
     width: (100% - $gutter*4) *.2;
     margin-right:$gutter;
-    &:nth-child(5n+1) { clear:none; margin-right:0; }
-    &:nth-child(5n+2) { clear:both; }
+    &:nth-of-type(5n) { margin-right:0; }
+    &:nth-of-type(5n+1) { clear:both; }
   }
 }
 
@@ -95,8 +97,8 @@
   &> .column, &> .col {
     width: (100% - $gutter*5) * (1/6);
     margin-right:$gutter;
-    &:nth-child(6n+1) { clear:none; margin-right:0; }
-    &:nth-child(6n+2) { clear:both; }
+    &:nth-of-type(6n) { margin-right:0; }
+    &:nth-of-type(6n+1) { clear:both; }
   }
 }
 
@@ -114,8 +116,8 @@
   &> .column, &> .col {
     width: (100% - $gutter*6) * (1/7);
     margin-right:$gutter;
-    &:nth-child(7n+1) { clear:none; margin-right:0; }
-    &:nth-child(7n+2) { clear:both; }
+    &:nth-of-type(7n) { margin-right:0; }
+    &:nth-of-type(7n+1) { clear:both; }
   }
 }
 
@@ -133,7 +135,7 @@
   &> .column, &> .col {
     width: (100% - $gutter*7) * (1/8);
     margin-right:$gutter;
-    &:nth-child(8n+1) { clear:none; margin-right:0; }
-    &:nth-child(8n+2) { clear:both; }
+    &:nth-of-type(8n) { margin-right:0; }
+    &:nth-of-type(8n+1) { clear:both; }
   }
 }

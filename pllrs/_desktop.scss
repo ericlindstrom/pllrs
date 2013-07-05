@@ -5,8 +5,8 @@
 //@mixin col_info($cols) {
 //  width:100% - ($gutter*($cols - 1)) * (1/$cols);
 //  margin-right:$gutter;
-//  &:nth-child($cols + 1) { margin-right:0; }
-//  &:nth-child($cols + 2) { clear:both; }
+//  &:nth-of-type($cols + 1) { margin-right:0; }
+//  &:nth-of-type($cols + 2) { clear:both; }
 //}
 
 /**
@@ -16,7 +16,7 @@
   &._1__ {
     &>.column, &>.col {
       width:(100% - $gutter) * .5;
-      &:nth-child(2n) { margin-right:$gutter; clear:both;}
+      &:nth-of-type(2n+1) { margin-right:$gutter; clear:both;}
     }
   }
 }
@@ -29,8 +29,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*2) * .3333334;
       margin-right:$gutter;
-      &:nth-child(3n+1) { margin-right:0; }
-      &:nth-child(3n+2) { clear:both; }
+      &:nth-of-type(3n) { margin-right:0; }
+      &:nth-of-type(3n+1) { clear:both; }
     }
   }
 }
@@ -43,8 +43,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*3) * .25;
       margin-right:$gutter;
-      &:nth-child(4n+1) { margin-right:0; }
-      &:nth-child(4n+2) { clear:both; }
+      &:nth-of-type(4n) { margin-right:0; }
+      &:nth-of-type(4n+1) { clear:both; }
     }
   }
 }
@@ -57,8 +57,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*4) * .20;
       margin-right:$gutter;
-      &:nth-child(5n+1) { margin-right:0; }
-      &:nth-child(5n+2) { clear:both; }
+      &:nth-of-type(5n) { margin-right:0; }
+      &:nth-of-type(5n+1) { clear:both; }
     }
   }
 }
@@ -71,8 +71,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*5) * (1/6);
       margin-right:$gutter;
-      &:nth-child(6n+1) { margin-right:0; }
-      &:nth-child(6n+2) { clear:both; }
+      &:nth-of-type(6n) { margin-right:0; }
+      &:nth-of-type(6n+1) { clear:both; }
     }
   }
 }
@@ -85,8 +85,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*6) * (1/7);
       margin-right:$gutter;
-      &:nth-child(7n+1) { margin-right:0; }
-      &:nth-child(7n+2) { clear:both; }
+      &:nth-of-type(7n) { margin-right:0; }
+      &:nth-of-type(7n+1) { clear:both; }
     }
   }
 }
@@ -99,8 +99,8 @@
     &>.column, &>.col {
       width:(100% - $gutter*7) * (1/8);
       margin-right:$gutter;
-      &:nth-child(8n+1) { margin-right:0; }
-      &:nth-child(8n+2) { clear:both; }
+      &:nth-of-type(8n) { margin-right:0; }
+      &:nth-of-type(8n+1) { clear:both; }
     }
   }
 }
