@@ -17,9 +17,17 @@
  * 3 Column
  */
 ._col3, ._column3 {
+  &.__21,
+  &.__2_,
   &.__1_ {
     &> .col, &> .column {
       @include pllr(3);
+    }
+  }
+
+  &._21_ {
+    &> .column, &> .col {
+      @include pllr(2);
     }
   }
 }

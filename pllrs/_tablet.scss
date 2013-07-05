@@ -28,7 +28,9 @@
 ._col3, ._column3 {
   &>.column, &>.col { @include pllr(3); }
 
-  &.__1_, &._1__ {
+  &._21_,
+  &.__1_, 
+  &._1__ {
     &> .column, &> .col {
       width: 100%;
       margin-right:0;
@@ -36,11 +38,13 @@
   }
 
   &.___2 {
-    &> .column, &> .col {
-      &:nth-of-type(2n) { margin-right:$gutter; }
-      &:nth-of-type(2n+1) { clear:none;}
-      @include pllr(3);
-    }
+    &> .column, &> .col { @include pllr(3); }
+  }
+
+  &.__21,
+  &._2_1,
+  &.__2_ {
+    &> .column, &> .col { @include pllr(2); }
   }
 
 

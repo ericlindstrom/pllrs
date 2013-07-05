@@ -16,9 +16,14 @@
  *  _column3 _1__ [x] (3111)
  *  _column3 __1_ [x] (3311)
  *  _column3      [x] (3331)
- *  _column3 _2__ [ ] (3222)
- *  _column3 __2_ [ ] (3322)
- *  _column3 ___2 [ ] (3332)
+ *  _column3 _2__ [x] (3222)
+ *  _column3 __2_ [x] (3322)
+ *  _column3 ___2 [x] (3332)
+ *  _column3 _2_1 [ ] (3221)
+ *  _column3 _21_ [ ] (3211)
+ *  _column3 __21 [ ] (3321)
+ *
+ *
  *  
  *  4 COLUMN GRID
  *  =============
@@ -74,9 +79,16 @@ $gutter: 4%;
 @mixin pllr($columns:2) {
   width:(100% - $gutter*($columns - 1)) * (1 / $columns);
   margin-right:$gutter;
+  $i:1;
+  @while $i < $columns {
+    &:nth-of-type(#{$i}n) { margin-right:$gutter; }
+    &:nth-of-type(#{$i}n+1) { clear:none;}
+    $i: $i + 1;
+  }
   &:nth-of-type(#{$columns}n) { margin-right:0; }
   &:nth-of-type(#{$columns}n+1) { clear:both; }
 }
+
 
 ._col8, ._column8,
 ._col7, ._column7,
@@ -115,6 +127,8 @@ $gutter: 4%;
     &>.column, &>.col { @include pllr(3); }
   }
 
+  &._2__,
+  &.__2_,
   &.___2 {
     &>.column, &>.col { @include pllr(2); }
   }
