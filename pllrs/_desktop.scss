@@ -2,22 +2,13 @@
  *  @file: pllrs/_desktop.scss
  */
 
-//@mixin col_info($cols) {
-//  width:100% - ($gutter*($cols - 1)) * (1/$cols);
-//  margin-right:$gutter;
-//  &:nth-of-type($cols + 1) { margin-right:0; }
-//  &:nth-of-type($cols + 2) { clear:both; }
-//}
 
 /**
  * 2 Column
  */
 ._col2, ._column2 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter) * .5;
-      &:nth-of-type(2n+1) { margin-right:$gutter; clear:both;}
-    }
+    &>.column, &>.col { @include pllr(2); }
   }
 }
 
@@ -26,12 +17,7 @@
  */
 ._col3, ._column3 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*2) * .3333334;
-      margin-right:$gutter;
-      &:nth-of-type(3n) { margin-right:0; }
-      &:nth-of-type(3n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(3); }
   }
 }
 
@@ -40,12 +26,7 @@
  */
 ._col4, ._column4 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*3) * .25;
-      margin-right:$gutter;
-      &:nth-of-type(4n) { margin-right:0; }
-      &:nth-of-type(4n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(4); }
   }
 }
 
@@ -54,12 +35,7 @@
  */
 ._col5, ._column5 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*4) * .20;
-      margin-right:$gutter;
-      &:nth-of-type(5n) { margin-right:0; }
-      &:nth-of-type(5n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(5); }
   }
 }
 
@@ -68,12 +44,7 @@
  */
 ._col6, ._column6 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*5) * (1/6);
-      margin-right:$gutter;
-      &:nth-of-type(6n) { margin-right:0; }
-      &:nth-of-type(6n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(6); }
   }
 }
 
@@ -82,12 +53,7 @@
  */
 ._col7, ._column7 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*6) * (1/7);
-      margin-right:$gutter;
-      &:nth-of-type(7n) { margin-right:0; }
-      &:nth-of-type(7n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(7); }
   }
 }
 
@@ -96,11 +62,6 @@
  */
 ._col8, ._column8 {
   &._1__ {
-    &>.column, &>.col {
-      width:(100% - $gutter*7) * (1/8);
-      margin-right:$gutter;
-      &:nth-of-type(8n) { margin-right:0; }
-      &:nth-of-type(8n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(8); }
   }
 }

@@ -17,11 +17,7 @@
 
   // default ___1
   &> .column, &> .col {
-    width: (100% - $gutter) *.5;
-    margin-right:$gutter;
-
-    &:nth-of-type(2n) { margin-right:0; }
-    &:nth-of-type(2n+1) { clear:both; }
+    @include pllr(2);
   }
 } // end of 2 column grid
 
@@ -30,6 +26,8 @@
  * 3 Column
  */
 ._col3, ._column3 {
+  &>.column, &>.col { @include pllr(3); }
+
   &.__1_, &._1__ {
     &> .column, &> .col {
       width: 100%;
@@ -37,12 +35,16 @@
     }
   }
 
-  &>.column, &>.col {
-    width: (100% - $gutter*2) *.3333334;
-    margin-right:$gutter;
-    &:nth-of-type(3n) { clear:none; margin-right:0; }
-    &:nth-of-type(3n+1) {  }
+  &.___2 {
+    &> .column, &> .col {
+      &:nth-of-type(2n) { margin-right:$gutter; }
+      &:nth-of-type(2n+1) { clear:none;}
+      @include pllr(3);
+    }
   }
+
+
+
 }
 
 /**
@@ -56,12 +58,7 @@
     }
   }
 
-  &> .column, &> .col {
-    width: (100% - $gutter*3) *.25;
-    margin-right:$gutter;
-    &:nth-of-type(4n) { margin-right:0; }
-    &:nth-of-type(4n+1) { clear:both; }
-  }
+  &> .column, &> .col { @include pllr(4); }
 }
 
 /**
@@ -75,12 +72,7 @@
     }
   }
 
-  &> .column, &> .col {
-    width: (100% - $gutter*4) *.2;
-    margin-right:$gutter;
-    &:nth-of-type(5n) { margin-right:0; }
-    &:nth-of-type(5n+1) { clear:both; }
-  }
+  &> .column, &> .col { @include pllr(5); }
 }
 
 /**
@@ -94,12 +86,7 @@
     }
   }
 
-  &> .column, &> .col {
-    width: (100% - $gutter*5) * (1/6);
-    margin-right:$gutter;
-    &:nth-of-type(6n) { margin-right:0; }
-    &:nth-of-type(6n+1) { clear:both; }
-  }
+  &> .column, &> .col { @include pllr(6); }
 }
 
 /**
@@ -113,12 +100,7 @@
     }
   }
 
-  &> .column, &> .col {
-    width: (100% - $gutter*6) * (1/7);
-    margin-right:$gutter;
-    &:nth-of-type(7n) { margin-right:0; }
-    &:nth-of-type(7n+1) { clear:both; }
-  }
+  &> .column, &> .col { @include pllr(7); }
 }
 
 /**
@@ -132,10 +114,5 @@
     }
   }
 
-  &> .column, &> .col {
-    width: (100% - $gutter*7) * (1/8);
-    margin-right:$gutter;
-    &:nth-of-type(8n) { margin-right:0; }
-    &:nth-of-type(8n+1) { clear:both; }
-  }
+  &> .column, &> .col { @include pllr(8); }
 }

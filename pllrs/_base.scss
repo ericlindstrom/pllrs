@@ -16,6 +16,9 @@
  *  _column3 _1__ [x] (3111)
  *  _column3 __1_ [x] (3311)
  *  _column3      [x] (3331)
+ *  _column3 _2__ [ ] (3222)
+ *  _column3 __2_ [ ] (3322)
+ *  _column3 ___2 [ ] (3332)
  *  
  *  4 COLUMN GRID
  *  =============
@@ -47,10 +50,10 @@
 
  *  8 COLUMN GRID
  *  =============
- *  _column7 ____ [x] (7777)
- *  _column7 _1__ [x] (7111)
- *  _column7 __1_ [x] (7711)
- *  _column7      [x] (7771)
+ *  _column8 ____ [x] (7777)
+ *  _column8 _1__ [x] (7111)
+ *  _column8 __1_ [x] (7711)
+ *  _column8      [x] (7771)
  *
  *  More to Come
  */
@@ -68,12 +71,12 @@ $gutter: 4%;
   width: $width;
 }
 
-//@mixin _content($number) {
-//  width:(100% - ($gutter*(#{$number} - 1))) * (1 / #{$number});
-//  margin-right:$gutter;
-//  &:nth-of-type(#{$number}n) { clear:both; }
-//  &:nth-of-type(#{$number}n+1) { margin-right:0; }
-//}
+@mixin pllr($columns:2) {
+  width:(100% - $gutter*($columns - 1)) * (1 / $columns);
+  margin-right:$gutter;
+  &:nth-of-type(#{$columns}n) { margin-right:0; }
+  &:nth-of-type(#{$columns}n+1) { clear:both; }
+}
 
 ._col8, ._column8,
 ._col7, ._column7,
@@ -87,7 +90,6 @@ $gutter: 4%;
 
   &> .column, &> .col { 
     @include _flpr(); 
-    //margin-right:$gutter;
   }
 }
 
@@ -99,12 +101,7 @@ $gutter: 4%;
 
   //&._222, &._2__, 
   &.____ {
-    &>.column, &>.col {
-      width:(100% - $gutter) * (1/2);
-      margin-right:$gutter;
-      &:nth-of-type(2n) { margin-right:0; }
-      &:nth-of-type(2n+1) { margin-right:$gutter; clear:both; }
-    }
+    &>.column, &>.col { @include pllr(2); }
   }
 }
 
@@ -113,14 +110,15 @@ $gutter: 4%;
  */
 ._col3, ._column3 {
   //&._333, &._3__,
+
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*2) * (1/3);
-      margin-right:$gutter;
-      &:nth-of-type(3n) { margin-right:0; clear:none; }
-      &:nth-of-type(3n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(3); }
   }
+
+  &.___2 {
+    &>.column, &>.col { @include pllr(2); }
+  }
+
 }
 
 /**
@@ -129,13 +127,7 @@ $gutter: 4%;
 ._col4, ._column4 {
   //&._444, &._4__
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*3) *(1/4);
-      margin-right:$gutter;
-      &:nth-of-type(4n) { margin-right:0; }
-      &:nth-of-type(4n+1) { margin-right:$gutter; clear:both; }
-
-    }
+    &>.column, &>.col { @include pllr(4); }
   }
 
   &.___2, &.__2_, &._2__ {}
@@ -147,12 +139,7 @@ $gutter: 4%;
 ._col5, ._column5 {
   //&._555, &._5__
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*4) *(1/5);
-      margin-right:$gutter;
-      &:nth-of-type(5n) { margin-right:0; }
-      &:nth-of-type(5n+1) { margin-right:$gutter; clear:both; }
-    }
+    &>.column, &>.col { @include pllr(5); }
   }
 }
 
@@ -162,12 +149,7 @@ $gutter: 4%;
 ._col6, ._column6 {
   //&._666, &._6__
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*5) *(1/6);
-      margin-right:$gutter;
-      &:nth-of-type(6n) { margin-right:0; }
-      &:nth-of-type(6n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(6); }
   }
 }
 
@@ -178,12 +160,7 @@ $gutter: 4%;
 ._col7, ._column7 {
   //&._777, &._7__
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*6) *(1/7);
-      margin-right:$gutter;
-      &:nth-of-type(7n) { margin-right:0; }
-      &:nth-of-type(7n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(7); }
   }
 }
 
@@ -193,11 +170,6 @@ $gutter: 4%;
 ._col8, ._column8 {
   //&._888, &._8__
   &.____ { 
-    &>.column, &>.col {
-      width:(100% - $gutter*7) *(1/8);
-      margin-right:$gutter;
-      &:nth-of-type(8n) { margin-right:0; }
-      &:nth-of-type(8n+1) { clear:both; }
-    }
+    &>.column, &>.col { @include pllr(8); }
   }
 }
