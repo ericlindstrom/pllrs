@@ -2,6 +2,103 @@
  *  @file: pllrs/pllrs.scss
  */
 
+/** 
+ *  2 COLUMN GRID
+ *  =============
+ *  _column2 ____ [x] (2222)
+ *  _column2 _1__ [x] (2111)
+ *  _column2 __1_ [x] (2211)
+ *  _column2      [x] (2221)
+ *  
+ *  3 COLUMN GRID
+ *  =============
+ *  _column3 ____ [x] (3333)
+ *  _column3 _1__ [x] (3111)
+ *  _column3 __1_ [x] (3311)
+ *  _column3      [x] (3331)
+ *  _column3 _2__ [x] (3222)
+ *  _column3 __2_ [x] (3322)
+ *  _column3 ___2 [x] (3332)
+ *  _column3 _2_1 [x] (3221)
+ *  _column3 _21_ [x] (3211)
+ *  _column3 __21 [x] (3321)
+ *
+ *  4 COLUMN GRID
+ *  =============
+ *  _column4 ____ [x] (4444)
+ *  _column4 _1__ [x] (4111)
+ *  _column4 __1_ [x] (4411)
+ *  _column4      [x] (4441)
+ *  _column4 _3__ [x] (4333)
+ *  _column4 __3_ [x] (4433)
+ *  _column4 ___3 [x] (4443)
+ *  _column4 _32_ [x] (4322)
+ *  _column4 _3_2 [x] (4332)
+ *  _column4 _31_ [x] (4311)
+ *  _column4 _3_1 [x] (4331)
+ *  _column4 _321 [x] (4321)
+ *  _column4 _2__ [x] (4222)
+ *  _column4 __2_ [x] (4422)
+ *  _column4 ___2 [x] (4442)
+ *  
+ *  5 COLUMN GRID
+ *  =============
+ *  _column5 ____ [x] (5555)
+ *  _column5 _1__ [x] (5111)
+ *  _column5 __1_ [x] (5511)
+ *  _column5      [x] (5551)
+ *  _column5 _3__ [x] (5333)
+ *  _column5 __3_ [x] (5533)
+ *  _column5 ___3 [x] (5553)
+ *  _column5 _2__ [x] (5222)
+ *  _column5 __2_ [x] (5522)
+ *  _column5 ___2 [x] (5552)
+ *  
+ *  6 COLUMN GRID
+ *  =============
+ *  _column6 ____ [x] (6666)
+ *  _column6 _1__ [x] (6111)
+ *  _column6 __1_ [x] (6611)
+ *  _column6      [x] (6661)
+ *  _column6 _4__ [ ] (6444)
+ *  _column6 __4_ [ ] (6644)
+ *  _column6 ___4 [ ] (6664)
+ *  _column6 _3__ [ ] (6333)
+ *  _column6 __3_ [ ] (6633)
+ *  _column6 ___3 [ ] (6663)
+ *  _column6 _2__ [ ] (6222)
+ *  _column6 __2_ [ ] (6622)
+ *  _column6 ___2 [ ] (6662)
+ *  _column6 _4_2 [ ] (6442)
+ *  _column6 __42 [ ] (6642)
+ *  _column6 _42_ [ ] (6422)
+ *  _column6 _3_2 [ ] (6332)
+ *  _column6 _3_1 [ ] (6331)
+ *  
+ *  7 COLUMN GRID
+ *  =============
+ *  _column7 ____ [x] (7777)
+ *  _column7 _1__ [x] (7111)
+ *  _column7 __1_ [x] (7711)
+ *  _column7      [x] (7771)
+ *  _column7 _4__ [ ] (7444)
+ *  _column7 __4_ [ ] (7744)
+ *  _column7 ___4 [ ] (7774)
+ *  _column7 _3__ [ ] (7333)
+ *  _column7 __3_ [ ] (7733)
+ *  _column7 ___3 [ ] (7773)
+
+
+ *  8 COLUMN GRID
+ *  =============
+ *  _column8 ____ [x] (7777)
+ *  _column8 _1__ [x] (7111)
+ *  _column8 __1_ [x] (7711)
+ *  _column8      [x] (7771)
+ *
+ *  More to Come
+ */
+
 @import 'base';
 
 @media screen and (min-width:600px) {

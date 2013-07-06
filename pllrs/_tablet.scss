@@ -5,10 +5,10 @@
 /**
  * 2 Column
  */
-._col2, ._column2 {
+._column2 {
 
   &._1__, &.__1_ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
@@ -16,7 +16,7 @@
 
 
   // default ___1
-  &> .column, &> .col {
+  &> .column {
     @include pllr(2);
   }
 } // end of 2 column grid
@@ -25,26 +25,26 @@
 /**
  * 3 Column
  */
-._col3, ._column3 {
-  &>.column, &>.col { @include pllr(3); }
+._column3 {
+  &>.column { @include pllr(3); }
 
   &._21_,
   &.__1_, 
   &._1__ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
   &.___2 {
-    &> .column, &> .col { @include pllr(3); }
+    &> .column { @include pllr(3); }
   }
 
   &.__21,
   &._2_1,
   &.__2_ {
-    &> .column, &> .col { @include pllr(2); }
+    &> .column { @include pllr(2); }
   }
 
 
@@ -54,69 +54,99 @@
 /**
  * 4 Column
  */
-._col4, ._column4 {
-  &.__1_, &._1__ {
-    &> .column, &> .col {
+._column4 {
+  &> .column { @include pllr(4); }
+
+  &._31_,
+  &.__1_, 
+  &._1__ {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
-  &> .column, &> .col { @include pllr(4); }
+  &.___2,
+  &.___3 {
+    &> .column {
+      @include pllr(4);
+    }
+  }
+
+  &._3_1,
+  &._3_2 {
+    &> .column {
+      @include pllr(3);
+    }
+  }
+
+  &._321 {
+    &> .column { @include pllr(2); }
+  }
+
 }
 
 /**
  * 5 Column
  */
-._col5, ._column5 {
+._column5 {
+  &> .column { @include pllr(5); }
+
   &.__1_, &._1__ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
-  &> .column, &> .col { @include pllr(5); }
+  &.___2,
+  &.___3 {
+    &>.column { @include pllr(5); }
+  }
+
+  &.__3_ {
+    &>.column { @include pllr(3); }
+  }
 }
 
 /**
  * 6 Column
  */
-._col6, ._column6 {
+._column6 {
   &.__1_, &._1__ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
-  &> .column, &> .col { @include pllr(6); }
+  &> .column { @include pllr(6); }
 }
 
 /**
  * 7 Column
  */
-._col7, ._column7 {
+._column7 {
   &.__1_, &._1__ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
-  &> .column, &> .col { @include pllr(7); }
+  &> .column { @include pllr(7); }
 }
 
 /**
  * 8 Column
  */
-._col8, ._column8 {
+._column8 {
   &.__1_, &._1__ {
-    &> .column, &> .col {
+    &> .column {
       width: 100%;
       margin-right:0;
     }
   }
 
-  &> .column, &> .col { @include pllr(8); }
+  &> .column { @include pllr(8); }
 }

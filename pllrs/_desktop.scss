@@ -6,26 +6,26 @@
 /**
  * 2 Column
  */
-._col2, ._column2 {
+._column2 {
   &._1__ {
-    &>.column, &>.col { @include pllr(2); }
+    &>.column { @include pllr(2); }
   }
 }
 
 /**
  * 3 Column
  */
-._col3, ._column3 {
+._column3 {
 
   &.__21,
   &._21_,
   &._2_1,
   &._1__ {
-    &>.column, &>.col { @include pllr(3); }
+    &>.column { @include pllr(3); }
   }
 
   &._2__ {
-    &> .column, &> .col { @include pllr(3); }
+    &> .column { @include pllr(3); }
   }
 
 }
@@ -33,44 +33,55 @@
 /**
  * 4 Column
  */
-._col4, ._column4 {
+._column4 {
+  &._2__,
+  &._321,
+  &._31_,
+  &._3_1,
+  &._32_,
+  &._3_2,
+  &._3__,
   &._1__ {
-    &>.column, &>.col { @include pllr(4); }
+    &>.column { @include pllr(4); }
   }
+
 }
 
 /**
  * 5 Column
  */
-._col5, ._column5 {
+._column5 {
+
+  &._2__,
+  &._3__,
   &._1__ {
-    &>.column, &>.col { @include pllr(5); }
+    &>.column { @include pllr(5); }
   }
 }
 
 /**
  * 6 Column
  */
-._col6, ._column6 {
+._column6 {
   &._1__ {
-    &>.column, &>.col { @include pllr(6); }
+    &>.column { @include pllr(6); }
   }
 }
 
 /**
  * 7 Column
  */
-._col7, ._column7 {
+._column7 {
   &._1__ {
-    &>.column, &>.col { @include pllr(7); }
+    &>.column { @include pllr(7); }
   }
 }
 
 /**
  * 8 Column
  */
-._col8, ._column8 {
+._column8 {
   &._1__ {
-    &>.column, &>.col { @include pllr(8); }
+    &>.column { @include pllr(8); }
   }
 }

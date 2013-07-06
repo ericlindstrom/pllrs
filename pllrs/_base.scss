@@ -2,67 +2,6 @@
  *  @file: pllrs/_base.scss
  */
 
-/** 
- *  2 COLUMN GRID
- *  =============
- *  _column2 ____ [x] (2222)
- *  _column2 _1__ [x] (2111)
- *  _column2 __1_ [x] (2211)
- *  _column2      [x] (2221)
- *  
- *  3 COLUMN GRID
- *  =============
- *  _column3 ____ [x] (3333)
- *  _column3 _1__ [x] (3111)
- *  _column3 __1_ [x] (3311)
- *  _column3      [x] (3331)
- *  _column3 _2__ [x] (3222)
- *  _column3 __2_ [x] (3322)
- *  _column3 ___2 [x] (3332)
- *  _column3 _2_1 [ ] (3221)
- *  _column3 _21_ [ ] (3211)
- *  _column3 __21 [ ] (3321)
- *
- *
- *  
- *  4 COLUMN GRID
- *  =============
- *  _column4 ____ [x] (4444)
- *  _column4 _1__ [x] (4111)
- *  _column4 __1_ [x] (4411)
- *  _column4      [x] (4441)
- *  
- *  5 COLUMN GRID
- *  =============
- *  _column5 ____ [x] (5555)
- *  _column5 _1__ [x] (5111)
- *  _column5 __1_ [x] (5511)
- *  _column5      [x] (5551)
- *  
- *  6 COLUMN GRID
- *  =============
- *  _column6 ____ [x] (6666)
- *  _column6 _1__ [x] (6111)
- *  _column6 __1_ [x] (6611)
- *  _column6      [x] (6661)
- *  
- *  7 COLUMN GRID
- *  =============
- *  _column7 ____ [x] (7777)
- *  _column7 _1__ [x] (7111)
- *  _column7 __1_ [x] (7711)
- *  _column7      [x] (7771)
-
- *  8 COLUMN GRID
- *  =============
- *  _column8 ____ [x] (7777)
- *  _column8 _1__ [x] (7111)
- *  _column8 __1_ [x] (7711)
- *  _column8      [x] (7771)
- *
- *  More to Come
- */
-
 $gutter: 4%;
 
 * {
@@ -90,17 +29,17 @@ $gutter: 4%;
 }
 
 
-._col8, ._column8,
-._col7, ._column7,
-._col6, ._column6, 
-._col5, ._column5, 
-._col4, ._column4, 
-._col3, ._column3,  
-._col2, ._column2,  
-._col, ._column {
+._column8,
+._column7,
+._column6, 
+._column5, 
+._column4, 
+._column3,  
+._column2,  
+._column {
   @include _flpr();
 
-  &> .column, &> .col { 
+  &> .column { 
     @include _flpr(); 
   }
 }
@@ -108,29 +47,28 @@ $gutter: 4%;
 /**
  *  2 Column
  */
-
-._col2, ._column2 {
+._column2 {
 
   //&._222, &._2__, 
   &.____ {
-    &>.column, &>.col { @include pllr(2); }
+    &>.column { @include pllr(2); }
   }
 }
 
 /**
  * 3 Column
  */
-._col3, ._column3 {
+._column3 {
   //&._333, &._3__,
 
   &.____ { 
-    &>.column, &>.col { @include pllr(3); }
+    &>.column { @include pllr(3); }
   }
 
   &._2__,
   &.__2_,
   &.___2 {
-    &>.column, &>.col { @include pllr(2); }
+    &>.column { @include pllr(2); }
   }
 
 }
@@ -138,32 +76,57 @@ $gutter: 4%;
 /**
  * 4 Column
  */
-._col4, ._column4 {
-  //&._444, &._4__
+._column4 {
   &.____ { 
-    &>.column, &>.col { @include pllr(4); }
+    &>.column { @include pllr(4); }
   }
 
-  &.___2, &.__2_, &._2__ {}
+  &._3__,
+  &.__3_,
+  &.___3 {
+    &>.column { @include pllr(3); }
+  }
+
+  &._2__,
+  &.__2_,
+  &.___2,
+  &._32_,
+  &._3_2 {
+    &>.column { @include pllr(2); }
+
+  }
+
 }
 
 /**
  * 5 Column
  */
-._col5, ._column5 {
+._column5 {
   //&._555, &._5__
   &.____ { 
-    &>.column, &>.col { @include pllr(5); }
+    &>.column { @include pllr(5); }
+  }
+
+  &._3__,
+  &.__3_,
+  &.___3 {
+    &>.column { @include pllr(3); }
+  }
+
+  &._2__,
+  &.__2_,
+  &.___2 {
+    &>.column { @include pllr(2); }
   }
 }
 
 /**
  * 6 Column
  */
-._col6, ._column6 {
+._column6 {
   //&._666, &._6__
   &.____ { 
-    &>.column, &>.col { @include pllr(6); }
+    &>.column { @include pllr(6); }
   }
 }
 
@@ -171,19 +134,19 @@ $gutter: 4%;
 /**
  * 7 Column
  */
-._col7, ._column7 {
+._column7 {
   //&._777, &._7__
   &.____ { 
-    &>.column, &>.col { @include pllr(7); }
+    &>.column { @include pllr(7); }
   }
 }
 
 /**
  * 8 Column
  */
-._col8, ._column8 {
+._column8 {
   //&._888, &._8__
   &.____ { 
-    &>.column, &>.col { @include pllr(8); }
+    &>.column { @include pllr(8); }
   }
 }
