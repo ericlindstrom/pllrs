@@ -4,7 +4,7 @@
 
 $gutter: 4%;
 
-* {
+.column {
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
@@ -127,6 +127,30 @@ $gutter: 4%;
   //&._666, &._6__
   &.____ { 
     &>.column { @include pllr(6); }
+  }
+
+  &._4__,
+  &.__4_,
+  &.___4 {
+    &>.column { @include pllr(4); }
+  }
+
+  &._3__,
+  &.__3_,
+  &.___3 {
+    &>.column { @include pllr(3); }
+  }
+
+  &._32_,
+  &._3_2,
+  &.__32,
+  &._42_,
+  &._4_2,
+  &.__42,
+  &._2__,
+  &.__2_,
+  &.___2 {
+    &>.column { @include pllr(2); }
   }
 }
 

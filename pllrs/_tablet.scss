@@ -113,6 +113,9 @@
  * 6 Column
  */
 ._column6 {
+  &> .column { @include pllr(6); }
+
+  &._31_,
   &.__1_, &._1__ {
     &> .column {
       width: 100%;
@@ -120,7 +123,29 @@
     }
   }
 
-  &> .column { @include pllr(6); }
+  &._4_2,
+  &.__42,
+  &.__4_ {
+    &>.column { @include pllr(4); }
+  }
+
+  &.__31,
+  &._3_1,
+  &._3_2,
+  &.__32,
+  &.__3_ {
+    &>.column { @include pllr(3); }
+  }
+
+  &.__2_ {
+    &>.column { @include pllr(2); }
+  }
+
+  &.___2,
+  &.___3,
+  &.___4 {
+    &>.column { @include pllr(6); }
+  }
 }
 
 /**
