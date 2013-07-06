@@ -15,20 +15,20 @@ $gutter: 4%;
   width: $width;
 }
 
-@mixin pllr($columns:2) {
-  width:(100% - $gutter*($columns - 1)) * (1 / $columns);
-  margin-right:$gutter;
+@mixin pllr($columns:2, $extra:null) {
+  width:(100% - $gutter*($columns - 1)) * (1 / $columns) $extra;
+  margin-right:$gutter $extra;
   $i:1;
   @while $i < $columns {
-    &:nth-of-type(#{$i}n) { margin-right:$gutter; }
-    &:nth-of-type(#{$i}n+1) { clear:none;}
+    &:nth-of-type(#{$i}n) { margin-right:$gutter $extra; }
+    &:nth-of-type(#{$i}n+1) { clear:none $extra;}
     $i: $i + 1;
   }
-  &:nth-of-type(#{$columns}n) { margin-right:0; }
-  &:nth-of-type(#{$columns}n+1) { clear:both; }
+  &:nth-of-type(#{$columns}n) { margin-right:0 $extra; }
+  &:nth-of-type(#{$columns}n+1) { clear:both $extra; }
 }
 
-
+._column9,
 ._column8,
 ._column7,
 ._column6, 
@@ -49,7 +49,6 @@ $gutter: 4%;
  */
 ._column2 {
 
-  //&._222, &._2__, 
   &.____ {
     &>.column { @include pllr(2); }
   }
@@ -59,16 +58,22 @@ $gutter: 4%;
  * 3 Column
  */
 ._column3 {
-  //&._333, &._3__,
 
   &.____ { 
     &>.column { @include pllr(3); }
   }
 
-  &._2__,
-  &.__2_,
-  &.___2 {
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
     &>.column { @include pllr(2); }
+  }
+
+  &[class$="1__"],
+  &[class$="1_"],
+  &[class$="1"] {
+    &>.column { @include pllr(1); }
+
   }
 
 }
@@ -77,140 +82,176 @@ $gutter: 4%;
  * 4 Column
  */
 ._column4 {
-  &.____ { 
+
+  &.____ {
     &>.column { @include pllr(4); }
   }
-
-  &._3__,
-  &.__3_,
-  &.___3 {
+  &[class$="3__"],
+  &[class$="3_"],
+  &[class$="3"] { 
     &>.column { @include pllr(3); }
   }
 
-  &._2__,
-  &.__2_,
-  &.___2,
-  &._32_,
-  &._3_2 {
-    &>.column { @include pllr(2); }
-
-  }
-
-}
-
-/**
- * 5 Column
- */
-._column5 {
-  //&._555, &._5__
-  &.____ { 
-    &>.column { @include pllr(5); }
-  }
-
-  &._3__,
-  &.__3_,
-  &.___3 {
-    &>.column { @include pllr(3); }
-  }
-
-  &._2__,
-  &.__2_,
-  &.___2 {
-    &>.column { @include pllr(2); }
-  }
-}
-
-/**
- * 6 Column
- */
-._column6 {
-  //&._666, &._6__
-  &.____ { 
-    &>.column { @include pllr(6); }
-  }
-
-  &._4__,
-  &.__4_,
-  &.___4 {
-    &>.column { @include pllr(4); }
-  }
-
-  &._3__,
-  &.__3_,
-  &.___3 {
-    &>.column { @include pllr(3); }
-  }
-
-  &._32_,
-  &._3_2,
-  &.__32,
-  &._42_,
-  &._4_2,
-  &.__42,
-  &._2__,
-  &.__2_,
-  &.___2 {
-    &>.column { @include pllr(2); }
-  }
-}
-
-
-/**
- * 7 Column
- */
-._column7 {
-  //&._777, &._7__
-  &.____ { 
-    &>.column { @include pllr(7); }
-  }
-
-  &._4__,
-  &.__4_,
-  &.___4 {
-    &>.column { @include pllr(4); }
-  }
-
-  &._3__,
-  &.__3_,
-  &.___3 {
-    &>.column { @include pllr(3); }
-  }
-
-  &._2__,
-  &.__2_,
-  &.___2 {
-    &>.column { @include pllr(2); }
-  }
-}
-
-/**
- * 8 Column
- */
-._column8 {
-  //&._888, &._8__
-  &.____ { 
-    &>.column { @include pllr(8); }
-  }
-
-  &._4__,
-  &.__4_,
-  &.___4 {
-    &>.column { @include pllr(4); }
-  }
-
-  &._4_3,
-  &._43_,
-  &._63_ {
-    &>.column { @include pllr(3); }
-  }
-
-  &._42_,
-  &._432,
-  &._4_2,
-  &._642,
-  &._632,
-  &._62_ {
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
     &>.column { @include pllr(2); }
   }
 
 }
+
+///**
+// * 4 Column
+// */
+//._column4 {
+//  &.____ { 
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &._3__,
+//  &.__3_,
+//  &.___3 {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &._2__,
+//  &.__2_,
+//  &.___2,
+//  &._32_,
+//  &._3_2 {
+//    &>.column { @include pllr(2); }
+//
+//  }
+//
+//}
+//
+///**
+// * 5 Column
+// */
+//._column5 {
+//  //&._555, &._5__
+//  &.____ { 
+//    &>.column { @include pllr(5); }
+//  }
+//
+//  &._3__,
+//  &.__3_,
+//  &.___3 {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &._2__,
+//  &.__2_,
+//  &.___2 {
+//    &>.column { @include pllr(2); }
+//  }
+//}
+//
+///**
+// * 6 Column
+// */
+//._column6 {
+//  //&._666, &._6__
+//  &.____ { 
+//    &>.column { @include pllr(6); }
+//  }
+//
+//  &._4__,
+//  &.__4_,
+//  &.___4 {
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &._3__,
+//  &.__3_,
+//  &.___3 {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &._32_,
+//  &._3_2,
+//  &.__32,
+//  &._42_,
+//  &._4_2,
+//  &.__42,
+//  &._2__,
+//  &.__2_,
+//  &.___2 {
+//    &>.column { @include pllr(2); }
+//  }
+//}
+//
+//
+///**
+// * 7 Column
+// */
+//._column7 {
+//  //&._777, &._7__
+//  &.____ { 
+//    &>.column { @include pllr(7); }
+//  }
+//
+//  &._4__,
+//  &.__4_,
+//  &.___4 {
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &._3__,
+//  &.__3_,
+//  &.___3 {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &._2__,
+//  &.__2_,
+//  &.___2 {
+//    &>.column { @include pllr(2); }
+//  }
+//}
+//
+///**
+// * 8 Column
+// */
+//._column8 {
+//  //&._888, &._8__
+//  &.____ { 
+//    &>.column { @include pllr(8); }
+//  }
+//
+//  &._4__,
+//  &.__4_,
+//  &.___4 {
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &._4_3,
+//  &._43_,
+//  &._63_ {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &._42_,
+//  &._432,
+//  &._4_2,
+//  &._642,
+//  &._632,
+//  &._62_ {
+//    &>.column { @include pllr(2); }
+//  }
+//
+//}
+//
+//._column9 {
+//  &[class$="2__"],
+//  &[class$="2_"],
+//  &[class$="2"] {
+//    &>.column { @include pllr(2); }
+//  }
+//
+//  &[class$="3__"],
+//  &[class$="3_"],
+//  &[class$="3"] {
+//    &>.column { @include pllr(3); }
+//  }
+//}

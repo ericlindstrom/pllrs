@@ -28,26 +28,20 @@
 ._column3 {
   &>.column { @include pllr(3); }
 
-  &._21_,
-  &.__1_, 
-  &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
 
-  &.___2 {
+  &[class$="_2"],
+  &[class$="__1"] { 
     &> .column { @include pllr(3); }
   }
 
-  &.__21,
-  &._2_1,
-  &.__2_ {
+  &[class$="21"],
+  &[class$="2_1"] {
     &> .column { @include pllr(2); }
   }
 
-
+  &[class$="1_"] {
+    &>.column { @include pllr(1); }
+  }
 
 }
 
@@ -55,143 +49,163 @@
  * 4 Column
  */
 ._column4 {
-  &> .column { @include pllr(4); }
+  &>.column { @include pllr(4); }
 
-  &._31_,
-  &.__1_, 
-  &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
-
-  &.___2,
-  &.___3 {
-    &> .column {
-      @include pllr(4);
-    }
-  }
-
-  &._3_1,
-  &._3_2 {
-    &> .column {
-      @include pllr(3);
-    }
-  }
-
-  &._321 {
-    &> .column { @include pllr(2); }
+  &[class$="1__"],
+  &[class$="1_"] { 
+    &>.column { @include pllr(1); }
   }
 
 }
 
-/**
- * 5 Column
- */
-._column5 {
-  &> .column { @include pllr(5); }
 
-  &.__1_, &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
-
-  &.___2,
-  &.___3 {
-    &>.column { @include pllr(5); }
-  }
-
-  &.__3_ {
-    &>.column { @include pllr(3); }
-  }
-}
-
-/**
- * 6 Column
- */
-._column6 {
-  &> .column { @include pllr(6); }
-
-  &._31_,
-  &.__1_, &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
-
-  &._4_2,
-  &.__42,
-  &.__4_ {
-    &>.column { @include pllr(4); }
-  }
-
-  &.__31,
-  &._3_1,
-  &._3_2,
-  &.__32,
-  &.__3_ {
-    &>.column { @include pllr(3); }
-  }
-
-  &.__2_ {
-    &>.column { @include pllr(2); }
-  }
-
-  &.___2,
-  &.___3,
-  &.___4 {
-    &>.column { @include pllr(6); }
-  }
-}
-
-/**
- * 7 Column
- */
-._column7 {
-  &> .column { @include pllr(7); }
-  &.__1_, &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
-
-  &.___2,
-  &.___3,
-  &.___4 {
-    &>.column { @include pllr(7); }
-  }
-}
-
-/**
- * 8 Column
- */
-._column8 {
-  &> .column { @include pllr(8); }
-
-  &.__1_, &._1__ {
-    &> .column {
-      width: 100%;
-      margin-right:0;
-    }
-  }
-
-  &.___4 {
-    &>.column { @include pllr(8); }
-  }
-
-  &._4_3,
-  &._4_2,
-  &._642 {
-    &>.column { @include pllr(4); }
-  }
-
-  &._432,
-  &._632 {
-    &>.column { @include pllr(3); }
-  }
-}
+///**
+// * 4 Column
+// */
+//._column4 {
+//  &> .column { @include pllr(4); }
+//
+//  &._31_,
+//  &.__1_, 
+//  &._1__ {
+//    &> .column {
+//      width: 100%;
+//      margin-right:0;
+//    }
+//  }
+//
+//  &.___2,
+//  &.___3 {
+//    &> .column {
+//      @include pllr(4);
+//    }
+//  }
+//
+//  &._3_1,
+//  &._3_2 {
+//    &> .column {
+//      @include pllr(3);
+//    }
+//  }
+//
+//  &._321 {
+//    &> .column { @include pllr(2); }
+//  }
+//
+//}
+//
+///**
+// * 5 Column
+// */
+//._column5 {
+//  &> .column { @include pllr(5); }
+//
+//  &.__1_, &._1__ {
+//    &> .column {
+//      width: 100%;
+//      margin-right:0;
+//    }
+//  }
+//
+//  &.___2,
+//  &.___3 {
+//    &>.column { @include pllr(5); }
+//  }
+//
+//  &.__3_ {
+//    &>.column { @include pllr(3); }
+//  }
+//}
+//
+///**
+// * 6 Column
+// */
+//._column6 {
+//  &> .column { @include pllr(6); }
+//
+//  &._31_,
+//  &.__1_, &._1__ {
+//    &> .column {
+//      width: 100%;
+//      margin-right:0;
+//    }
+//  }
+//
+//  &._4_2,
+//  &.__42,
+//  &.__4_ {
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &.__31,
+//  &._3_1,
+//  &._3_2,
+//  &.__32,
+//  &.__3_ {
+//    &>.column { @include pllr(3); }
+//  }
+//
+//  &.__2_ {
+//    &>.column { @include pllr(2); }
+//  }
+//
+//  &.___2,
+//  &.___3,
+//  &.___4 {
+//    &>.column { @include pllr(6); }
+//  }
+//}
+//
+///**
+// * 7 Column
+// */
+//._column7 {
+//  &> .column { @include pllr(7); }
+//  &.__1_, &._1__ {
+//    &> .column {
+//      width: 100%;
+//      margin-right:0;
+//    }
+//  }
+//
+//  &.___2,
+//  &.___3,
+//  &.___4 {
+//    &>.column { @include pllr(7); }
+//  }
+//}
+//
+///**
+// * 8 Column
+// */
+//._column8 {
+//  &> .column { @include pllr(8); }
+//
+//  &.__1_, &._1__ {
+//    &> .column {
+//      width: 100%;
+//      margin-right:0;
+//    }
+//  }
+//
+//  &.___4 {
+//    &>.column { @include pllr(8); }
+//  }
+//
+//  &._4_3,
+//  &._4_2,
+//  &._642 {
+//    &>.column { @include pllr(4); }
+//  }
+//
+//  &._432,
+//  &._632 {
+//    &>.column { @include pllr(3); }
+//  }
+//}
+//
+//._column9 {
+//  
+//  &> .column { @include pllr(9); }
+//
+//}

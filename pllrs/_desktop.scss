@@ -3,109 +3,14 @@
  */
 
 
-/**
- * 2 Column
- */
-._column2 {
-  &._1__ {
-    &>.column { @include pllr(2); }
-  }
-}
-
-/**
- * 3 Column
- */
-._column3 {
-
-  &.__21,
-  &._21_,
-  &._2_1,
-  &._1__ {
-    &>.column { @include pllr(3); }
-  }
-
-  &._2__ {
-    &> .column { @include pllr(3); }
-  }
-
-}
-
-/**
- * 4 Column
- */
-._column4 {
-  &._2__,
-  &._321,
-  &._31_,
-  &._3_1,
-  &._32_,
-  &._3_2,
-  &._3__,
-  &._1__ {
-    &>.column { @include pllr(4); }
-  }
-
-}
-
-/**
- * 5 Column
- */
-._column5 {
-
-  &._2__,
-  &._3__,
-  &._1__ {
-    &>.column { @include pllr(5); }
-  }
-}
-
-/**
- * 6 Column
- */
-._column6 {
-  &._31_,
-  &._3_1,
-  &._3_2,
-  &._32_,
-  &._4_2,
-  &._42_,
-  &._2__,
-  &._3__,
-  &._4__,
-  &._1__ {
-    &>.column { @include pllr(6); }
-  }
-}
-
-/**
- * 7 Column
- */
-._column7 {
-  &._2__,
-  &._3__,
-  &._4__,
-  &._1__ {
-    &>.column { @include pllr(7); }
-  }
-}
-
-/**
- * 8 Column
- */
-._column8 {
-  &._4_2,
-  &._4_3,
-  &._432,
-  &._43_,
-  &._42_,
-  &._642,
-  &._632,
-  &._63_,
-  &._62_,
-  &._4__,
-  &._1__ {
-    &>.column { @include pllr(8); }
-  }
+._column2[class^="_"] > .column { @include pllr(2); }
+._column3[class^="_"] > .column { @include pllr(3); }
+._column4[class^="_"] > .column { @include pllr(4); }
+._column5[class^="_"] > .column { @include pllr(5); }
+._column6[class^="_"] > .column { @include pllr(6); }
+._column7[class^="_"] > .column { @include pllr(7); }
+._column8[class^="_"] > .column { @include pllr(8); }
+//._column9[class^="_"] > .column { @include pllr(9); }
 
 
-}
+
