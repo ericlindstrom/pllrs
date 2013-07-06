@@ -35,10 +35,16 @@
  */
 ._column4 {
 
+  &[class$="_3_"],
   &[class$="_1_"],
   &[class$="___"] {
     &> .column { @include pllr(4); }
   }
+
+  &[class$="3__"] {
+    &> .column { @include pllr(3); }
+  }
+
 
   &[class$="1__"] { 
     &>.column {

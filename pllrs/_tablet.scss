@@ -51,6 +51,12 @@
 ._column4 {
   &>.column { @include pllr(4); }
 
+  &[class$="_3"] { 
+    &>.column { @include pllr(4); }
+  }
+
+
+
   &[class$="1__"],
   &[class$="1_"] { 
     &>.column { @include pllr(1); }
