@@ -118,15 +118,38 @@
       @include pllr(7);
     }
   }
+
+  &.__4_,
+  &.__3_,
+  &.__2_ {
+    &> .column {
+      @include pllr(7);
+    }
+  }
+
 }
 
 /**
  * 8 Column
  */
 ._column8 {
+  &.__4_,
   &.__1_ {
     &> .column {
       @include pllr(8);
     }
+  }
+
+  &._642,
+  &._632,
+  &._63_,
+  &._62_ {
+    &>.column { @include pllr(6); }
+  }
+
+  &._42_,
+  &._43_,
+  &._432 {
+    &>.column { @include pllr(4); }
   }
 }

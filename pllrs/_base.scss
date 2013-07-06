@@ -163,6 +163,24 @@ $gutter: 4%;
   &.____ { 
     &>.column { @include pllr(7); }
   }
+
+  &._4__,
+  &.__4_,
+  &.___4 {
+    &>.column { @include pllr(4); }
+  }
+
+  &._3__,
+  &.__3_,
+  &.___3 {
+    &>.column { @include pllr(3); }
+  }
+
+  &._2__,
+  &.__2_,
+  &.___2 {
+    &>.column { @include pllr(2); }
+  }
 }
 
 /**
@@ -173,4 +191,26 @@ $gutter: 4%;
   &.____ { 
     &>.column { @include pllr(8); }
   }
+
+  &._4__,
+  &.__4_,
+  &.___4 {
+    &>.column { @include pllr(4); }
+  }
+
+  &._4_3,
+  &._43_,
+  &._63_ {
+    &>.column { @include pllr(3); }
+  }
+
+  &._42_,
+  &._432,
+  &._4_2,
+  &._642,
+  &._632,
+  &._62_ {
+    &>.column { @include pllr(2); }
+  }
+
 }
