@@ -18,7 +18,7 @@ $gutter: 4%;
 @mixin pllr($columns:2, $extra:null) {
   width:(100% - $gutter*($columns - 1)) * (1 / $columns) $extra;
   margin-right:$gutter $extra;
-  $i:1;
+  $i:2;
   @while $i < $columns {
     &:nth-of-type(#{$i}n) { margin-right:$gutter $extra; }
     &:nth-of-type(#{$i}n+1) { clear:none $extra;}
