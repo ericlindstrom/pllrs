@@ -49,8 +49,13 @@
 ._column4 {
   &>.column { @include pllr(4); }
 
+  &[class$="__2"],
   &[class$="_3"] { 
     &>.column { @include pllr(4); }
+  }
+
+  &[class$="21"] { 
+    &>.column { @include pllr(2); }
   }
 
   &[class$="1__"],
@@ -60,3 +65,43 @@
 
 }
 
+._column5 {
+  &>.column { @include pllr(5); }
+
+  &[class$="__2"],
+  &[class$="__3"] { 
+    &>.column { @include pllr(5); }
+  }
+
+  &[class$="1__"],
+  &[class$="1_"] {
+    &>.column { @include pllr(1); }
+  }
+}
+
+._column6 {
+  &>.column { @include pllr(6); }
+
+  &[class$="__4"],
+  &[class$="__3"],
+  &[class$="__2"] { 
+    &>.column { @include pllr(6); }
+  }
+
+  &[class$="42"],
+  &[class$="4_2"] {
+    &>.column { @include pllr(4); }
+  }
+
+  &[class$="31"],
+  &[class$="3_1"],
+  &[class$="32"],
+  &[class$="3_2"] {
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="1__"],
+  &[class$="1_"] {
+    &>.column { @include pllr(1); }
+  }
+}

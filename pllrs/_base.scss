@@ -98,4 +98,55 @@ $gutter: 4%;
     &>.column { @include pllr(2); }
   }
 
+  &[class$="1__"],
+  &[class$="1_"],
+  &[class$="1"] {
+    &>.column { @include pllr(1); }
+  }
+
+}
+
+/**
+ * 5 Column
+ */
+._column5 {
+  &.____ {
+    &>.column { @include pllr(5); }
+  }
+
+  &[class$="3__"],
+  &[class$="3_"],
+  &[class$="3"] { 
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
+    &>.column { @include pllr(2); }
+  }
+}
+
+._column6 {
+  &.____ {
+    &>.column { @include pllr(6); }
+  }
+
+  &[class$="4__"],
+  &[class$="4_"],
+  &[class$="4"] { 
+    &>.column { @include pllr(4); }
+  }
+
+  &[class$="3__"],
+  &[class$="3_"],
+  &[class$="3"] { 
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
+    &>.column { @include pllr(2); }
+  }
 }

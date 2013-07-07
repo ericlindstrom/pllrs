@@ -34,13 +34,18 @@
  * 4 Column
  */
 ._column4 {
-
   &[class$="_3_"],
+  &[class$="_2_"],
   &[class$="_1_"],
   &[class$="___"] {
     &> .column { @include pllr(4); }
   }
 
+  &[class$="321"],
+  &[class$="3_1"],
+  &[class$="31_"],
+  &[class$="3_2"],
+  &[class$="32_"],
   &[class$="3__"] {
     &> .column { @include pllr(3); }
   }
@@ -51,6 +56,46 @@
       @include pllr(1); 
     }
   }
+}
 
+/**
+ * 5 Column
+ */
+._column5 { 
+  &[class$="_3_"],
+  &[class$="_2_"],
+  &[class$="_1_"],
+  &[class$="___"] {
+    &> .column { @include pllr(5); }
+  }
+}
+
+/**
+ * 6 Column
+ */
+._column6 { 
+  &[class$="_31"],
+  &[class$="_32"],
+  &[class$="_42"],
+  &[class$="_4_"],
+  &[class$="_3_"],
+  &[class$="_2_"],
+  &[class$="_1_"],
+  &[class$="___"] {
+    &> .column { @include pllr(6); }
+  }
+
+  &[class$="31_"],
+  &[class$="3_1"],
+  &[class$="32_"],
+  &[class$="3_2"] {
+    &> .column { @include pllr(3); }
+  }
+
+
+  &[class$="42_"],
+  &[class$="4_2"] {
+    &> .column { @include pllr(4); }
+  }
 
 }
