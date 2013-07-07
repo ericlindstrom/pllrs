@@ -65,6 +65,9 @@
 
 }
 
+/**
+ * 5 Column
+ */
 ._column5 {
   &>.column { @include pllr(5); }
 
@@ -79,6 +82,9 @@
   }
 }
 
+/**
+ * 6 Column
+ */
 ._column6 {
   &>.column { @include pllr(6); }
 
@@ -104,4 +110,51 @@
   &[class$="1_"] {
     &>.column { @include pllr(1); }
   }
+}
+
+/**
+ * 7 Column
+ */
+._column7 {
+  &>.column { @include pllr(7); }
+
+  &[class$="__4"],
+  &[class$="__3"],
+  &[class$="__2"] { 
+    &>.column { @include pllr(7); }
+  }
+
+  &[class$="1__"],
+  &[class$="1_"] {
+    &>.column { @include pllr(1); }
+  }
+}
+
+/**
+ * 8 Column
+ */
+._column8 {
+  &>.column { @include pllr(8); }
+
+  &[class$="__4"] { 
+    &>.column { @include pllr(8); }
+  }
+
+  &[class$="4_2"],
+  &[class$="4_3"],
+  &[class$="4_"],
+  &[class$="42"] {
+    &>.column { @include pllr(4); }
+  }
+
+  &[class$="3_"],
+  &[class$="32"] {
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="1__"],
+  &[class$="1_"] {
+    &>.column { @include pllr(1); }
+  }
+
 }

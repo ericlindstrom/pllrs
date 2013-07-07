@@ -99,3 +99,45 @@
   }
 
 }
+
+/**
+ * 7 Column
+ */
+._column7 { 
+  &[class$="_4_"],
+  &[class$="_3_"],
+  &[class$="_2_"],
+  &[class$="_1_"],
+  &[class$="___"] {
+    &> .column { @include pllr(7); }
+  }
+}
+
+/**
+ * 8 Column
+ */
+._column8 { 
+  &[class$="_4_"],
+  &[class$="_1_"],
+  &[class$="___"] {
+    &> .column { @include pllr(8); }
+  }
+
+  &[class$="62_"],
+  &[class$="63_"],
+  &[class$="632"],
+  &[class$="64_"],
+  &[class$="642"] {
+    &> .column { @include pllr(6); }
+  }
+
+  &[class$="42_"],
+  &[class$="4_2"],
+  &[class$="4_3"],
+  &[class$="43_"],
+  &[class$="432"] {
+    &> .column { @include pllr(4); }
+  }
+
+  
+}

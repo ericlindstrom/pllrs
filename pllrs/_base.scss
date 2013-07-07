@@ -127,6 +127,9 @@ $gutter: 4%;
   }
 }
 
+/**
+ * 6 Column
+ */
 ._column6 {
   &.____ {
     &>.column { @include pllr(6); }
@@ -139,6 +142,61 @@ $gutter: 4%;
   }
 
   &[class$="3__"],
+  &[class$="3_"],
+  &[class$="3"] { 
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
+    &>.column { @include pllr(2); }
+  }
+}
+
+/**
+ * 7 Column
+ */
+
+._column7 {
+  &.____ {
+    &>.column { @include pllr(7); }
+  }
+
+  &[class$="4__"],
+  &[class$="4_"],
+  &[class$="4"] { 
+    &>.column { @include pllr(4); }
+  }
+
+  &[class$="3__"],
+  &[class$="3_"],
+  &[class$="3"] { 
+    &>.column { @include pllr(3); }
+  }
+
+  &[class$="2__"],
+  &[class$="2_"],
+  &[class$="2"] {
+    &>.column { @include pllr(2); }
+  }
+}
+
+/**
+ * 8 Column
+ */
+
+._column8 {
+  &.____ {
+    &>.column { @include pllr(8); }
+  }
+
+  &[class$="4__"],
+  &[class$="4_"],
+  &[class$="4"] { 
+    &>.column { @include pllr(4); }
+  }
+
   &[class$="3_"],
   &[class$="3"] { 
     &>.column { @include pllr(3); }
