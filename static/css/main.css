@@ -21,7 +21,7 @@ footer,
 section, 
 .block { float:left; position:relative; width:100%; }
 
-#github_star { margin-top:18px; float:left; }
+#github_star { float:left; }
 
 .title {
   float:left; position:relative;
@@ -37,6 +37,7 @@ section,
 .right { float:right; }
 
 #footer { background:#FFF; border-top:1px solid #f0f0f0; }
+#footer .container { padding-top:14px; }
 
 .margin_btm3x { margin-bottom:30px; }
 .margin_top3x { margin-top:30px; }
@@ -85,14 +86,39 @@ pre {
 .pre { font-size:1.2em; color:#444; }
 .kern { letter-spacing:.2em; }
 pre { 
+  float:left; position:relative; width:100%;
   background:#FFF;
   padding:20px;
   border:1px solid #f0f0f0;
 }
 
-@media screen and (min-width:600px) {
-  .position { width:600px; }
+pre:after { 
+  font-family:'proxima-nova', Helvetica, Arial;
+  content: "(Base)";
+  bottom:0; right:0;
+  padding:10px;
+  float:right; position:absolute;
+  border:1px solid #f0f0f0;
+  border-bottom:0; border-right:0;
 }
 
-@media screen and (min-width:768px) {}
-@media screen and (min-width:1000px) {}
+.show_columns .column {
+  background:#FFF;
+  border:1px solid #f0f0f0;
+  padding:10px;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+@media screen and (min-width:600px) {
+  .position { width:600px; }
+
+  pre:after { content:"(Small Tablet)"; }
+}
+
+@media screen and (min-width:768px) {
+  pre:after { content:"(Large Tablet)"; }
+}
+@media screen and (min-width:1000px) {
+  pre:after { content:"(Desktop)"; }
+}
