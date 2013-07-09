@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="/static/css/normalize.css" rel="stylesheet" />
-    <link href="/static/css/pllrs.min.0.2.2.css" rel="stylesheet" />
+    <link href="/static/css/pllrs.min.0.3.0.css" rel="stylesheet" />
     <link href="/static/css/main.css" rel="stylesheet" />
   </head>
   <body>
@@ -35,26 +35,57 @@
 	    </div>
 	    <div class="column">
 	      <h3>How Do I use&nbsp;it?</h3>
-	      <p>You set your class <span class="pre">pllrs4</span> and dictate how your breakpoints fold with a secondary class of underscores <span class="pre">__2_</span></p>
-	      <p>A 4 Column </p>
-	    </div>
-	  </section>
-	  <section class="">
-	    <h3>What does it look&nbsp;like?</h3>
-	    <pre>&lt;div class="_column3 ____"&gt;
+	      <p>It's simple.</p>
+	      <pre class="large">&lt;div class="pllrs4 _3_2"&gt;
   &lt;div class="column"&gt;&lt;/div&gt;
   &lt;div class="column"&gt;&lt;/div&gt;
-  &lt;div class="column"&gt;&lt;/div&gt;
-  &lt;div class="column"&gt;&lt;/div&gt;
-  &lt;div class="column"&gt;&lt;/div&gt;
+  ...
 &lt;/div&gt;</pre>
+	    </div>
 	  </section>
-	  <section class="margin_btm3x margin_top3x _column2 ___1">
+	  <section class="faqs">
+	    <h3>Uhhh...</h3>
+	    <p>OK. you start with <span class="pre">pllrs</span> plus the number of columns you want for a desktop site, in this case 4 (<span class="pre">pllrs4</span>).  without a secondary class (<span class="pre">_3_2</span>), this will default to 4 Columns, until it hits mobile, which will then be a single column (<span class="pre">4441</span>).</p>
+
+	    <h3>What do the underscores mean?</h3>
+	    <p>pllrs uses a secondary class to inform the <span class="pre">columns</span> where to "fold". If a second class (beginning with underscores) is not found, it will default to <span class="pre">XXX1</span>. Otherwise, the underscore will indicate a "hold". If you wish to hold all the way from desktop to mobile use 4 underscores (<span class="pre">pllr3 <span class="kern">____</span></span>).</p>
+
+	    <h4>A Cookbook Example: 6 Column Grid</h4>
+	    <p>A 6 Column Grid that is the following: 6 Columns at Desktop, 3 Columns at Large Tablet, 3 Columns at Large, and 2 Columns at Mobile.</p>
+	    <pre>&lt;div class="pllrs6 _3_2"&gt;
+  &lt;div class="column"&gt;1&lt;/div&gt;
+  &lt;div class="column"&gt;2&lt;/div&gt;
+  &lt;div class="column"&gt;3&lt;/div&gt;
+  &lt;div class="column"&gt;4&lt;/div&gt;
+  &lt;div class="column"&gt;5&lt;/div&gt;
+  &lt;div class="column"&gt;6&lt;/div&gt;
+  &lt;div class="column"&gt;7&lt;/div&gt;
+  &lt;div class="column"&gt;8&lt;/div&gt;
+  ...
+&lt;/div&gt;</pre>
+
+<div class="pllrs6 _3_2">
+  <div class="column">1</div>
+  <div class="column">2</div>
+  <div class="column">3</div>
+  <div class="column">4</div>
+  <div class="column">5</div>
+  <div class="column">6</div>
+  <div class="column">7</div>
+
+</div>
+
+	    <h3>Does it support&nbsp;nesting?</h3>
+	    <p>You betcha.</p>
+	    <h3>Do I need to use divs?</h3>
+	    <p>Nope, feel free to use whatever HTML element you want.</p>
+	  </section>
+	  <section class="margin_btm3x margin_top3x pllrs2 ___1">
 	    <div class="column">
-	      <p class="center"><a href="#" class="button">View the Repo</a></p>
+	      <p class="center"><a target="_blank" href="http://github.com/ericlindstrom/pllrs" class="button">View the Repo</a></p>
 	    </div>
 	    <div class="column">
-	      <p class="center"><a href="#" class="button">Download v0.2.2</a></p>
+	      <p class="center"><a href="#" class="button">Download v0.3.0</a></p>
 	    </div>
 	  </section>
 
