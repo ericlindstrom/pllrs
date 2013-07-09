@@ -1,7 +1,8 @@
 body {
-  font-family:'proxima-nova', Helvetica, Arial;
+  font-family: 'proxima-nova', Helvetica, Arial;
   font-size:1.2em;
-  text-rendering:optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  background:#fbfbfb;
 }
 
 * {
@@ -10,12 +11,17 @@ body {
   box-sizing:border-box;
 }
 
+a { color:#cc6633; }
+
 .header_center { margin:0 auto; width:184px; }
 
 .container,
-header, 
+header,
+footer,
 section, 
 .block { float:left; position:relative; width:100%; }
+
+#github_star { margin-top:18px; }
 
 .title {
   float:left; position:relative;
@@ -27,6 +33,20 @@ section,
   margin:2em 0 .5em;
 }
 
+.small { font-size:.9em; }
+.right { float:right; }
+
+#footer { background:#FFF; border-top:1px solid #f0f0f0; }
+
+.margin_btm3x { margin-bottom:30px; }
+.margin_top3x { margin-top:30px; }
+
+
+h3 { 
+  font-weight:600;
+  text-transform:uppercase; 
+}
+
 .center { text-align:center; }
 
 .position {
@@ -34,6 +54,27 @@ section,
 }
 
 .container { padding:0 1em; }
+
+.button {
+  background:#FF9933;
+  color:#FFF;
+  padding:1em 2em;
+  font-weight:600;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:.8em;
+  line-height:.8em;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -o-border-radius:2px;
+  border-radius:2px;
+}
+
+.pre,
+pre { 
+  font-family:monospace;
+  font-size:.8em; 
+}
 
 @media screen and (min-width:600px) {
   .position { width:600px; }
