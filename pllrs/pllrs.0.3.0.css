@@ -1,0 +1,1508 @@
+/**
+ *  @file: pllrs/pllrs.scss
+ */
+/** 
+ *  2 COLUMN GRID (4)
+ *  =============
+ *  pllrs2 ____ [x] (2222)
+ *  pllrs2 _1__ [x] (2111)
+ *  pllrs2 __1_ [x] (2211)
+ *  pllrs2      [x] (2221)
+ *  
+ *  3 COLUMN GRID (10)
+ *  =============
+ *  pllrs3 ____ [x] (3333)
+ *  pllrs3 _1__ [x] (3111)
+ *  pllrs3 __1_ [x] (3311)
+ *  pllrs3      [x] (3331)
+ *  pllrs3 _2__ [x] (3222)
+ *  pllrs3 __2_ [x] (3322)
+ *  pllrs3 ___2 [x] (3332)
+ *  pllrs3 _2_1 [x] (3221)
+ *  pllrs3 _21_ [x] (3211)
+ *  pllrs3 __21 [x] (3321)
+ *
+ *  4 COLUMN GRID (15)
+ *  =============
+ *  pllrs4 ____ [x] (4444)
+ *  pllrs4 _1__ [x] (4111)
+ *  pllrs4 __1_ [x] (4411)
+ *  pllrs4      [x] (4441)
+ *  pllrs4 _3__ [x] (4333)
+ *  pllrs4 __3_ [x] (4433)
+ *  pllrs4 ___3 [x] (4443)
+ *  pllrs4 _32_ [x] (4322)
+ *  pllrs4 _3_2 [x] (4332)
+ *  pllrs4 _31_ [x] (4311)
+ *  pllrs4 _3_1 [x] (4331)
+ *  pllrs4 _321 [x] (4321)
+ *  pllrs4 _2__ [x] (4222)
+ *  pllrs4 __2_ [x] (4422)
+ *  pllrs4 ___2 [x] (4442)
+ *  
+ *  5 COLUMN GRID (10)
+ *  =============
+ *  pllrs5 ____ [x] (5555)
+ *  pllrs5 _1__ [x] (5111)
+ *  pllrs5 __1_ [x] (5511)
+ *  pllrs5      [x] (5551)
+ *  pllrs5 _3__ [x] (5333)
+ *  pllrs5 __3_ [x] (5533)
+ *  pllrs5 ___3 [x] (5553)
+ *  pllrs5 _2__ [x] (5222)
+ *  pllrs5 __2_ [x] (5522)
+ *  pllrs5 ___2 [x] (5552)
+ *  
+ *  6 COLUMN GRID (22)
+ *  =============
+ *  pllrs6 ____ [x] (6666)
+ *  pllrs6 _1__ [x] (6111)
+ *  pllrs6 __1_ [x] (6611)
+ *  pllrs6      [x] (6661)
+ *  pllrs6 _4__ [x] (6444)
+ *  pllrs6 __4_ [x] (6644)
+ *  pllrs6 ___4 [x] (6664)
+ *  pllrs6 _3__ [x] (6333)
+ *  pllrs6 __3_ [x] (6633)
+ *  pllrs6 ___3 [x] (6663)
+ *  pllrs6 _2__ [x] (6222)
+ *  pllrs6 __2_ [x] (6622)
+ *  pllrs6 ___2 [x] (6662)
+ *  pllrs6 _4_2 [x] (6442)
+ *  pllrs6 __42 [x] (6642)
+ *  pllrs6 _42_ [x] (6422)
+ *  pllrs6 _3_2 [x] (6332)
+ *  pllrs6 __32 [x] (6632)
+ *  pllrs6 _32_ [x] (6322)
+ *  pllrs6 _3_1 [x] (6331)
+ *  pllrs6 __31 [x] (6631)
+ *  pllrs6 _31_ [x] (6331)
+ *  
+ *  7 COLUMN GRID (13)
+ *  =============
+ *  pllrs7 ____ [x] (7777)
+ *  pllrs7 _1__ [x] (7111)
+ *  pllrs7 __1_ [x] (7711)
+ *  pllrs7      [x] (7771)
+ *  pllrs7 _4__ [x] (7444)
+ *  pllrs7 __4_ [x] (7744)
+ *  pllrs7 ___4 [x] (7774)
+ *  pllrs7 _3__ [x] (7333)
+ *  pllrs7 __3_ [x] (7733)
+ *  pllrs7 ___3 [x] (7773)
+ *  pllrs7 _2__ [x] (7222)
+ *  pllrs7 __2_ [x] (7722)
+ *  pllrs7 ___2 [x] (7772)
+
+
+ *  8 COLUMN GRID (15)
+ *  =============
+ *  pllrs8 ____ [x] (8888)
+ *  pllrs8 _1__ [x] (8111)
+ *  pllrs8 __1_ [x] (8811)
+ *  pllrs8      [x] (8881)
+ *  pllrs8 _4__ [x] (8444)
+ *  pllrs8 __4_ [x] (8844)
+ *  pllrs8 ___4 [x] (8884)
+ *  pllrs8 _642 [x] (8642)
+ *  pllrs8 _64_ [x] (8644)
+ *  pllrs8 _632 [x] (8632)
+ *  pllrs8 _63_ [x] (8633)
+ *  pllrs8 _62_ [x] (8622)
+ *  pllrs8 _432 [x] (8432)
+ *  pllrs8 _43_ [x] (8433)
+ *  pllrs8 _4_3 [x] (8443)
+ *  pllrs8 _4_2 [x] (8442)
+ *  pllrs8 _42_ [x] (8422)
+
+
+
+
+ */
+/**
+ *  @file: pllrs/_base.scss
+ */
+.column {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.pllrs9,
+.pllrs8,
+.pllrs7,
+.pllrs6,
+.pllrs5,
+.pllrs4,
+.pllrs3,
+.pllrs2,
+.pllrs {
+  float: left;
+  position: relative;
+  width: 100%; }
+  .pllrs9 > .column,
+  .pllrs8 > .column,
+  .pllrs7 > .column,
+  .pllrs6 > .column,
+  .pllrs5 > .column,
+  .pllrs4 > .column,
+  .pllrs3 > .column,
+  .pllrs2 > .column,
+  .pllrs > .column {
+    float: left;
+    position: relative;
+    width: 100%; }
+
+/**
+ *  2 Column
+ */
+.pllrs2.____ > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs2.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs2.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs2.____ > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs2.____ > .column:nth-of-type(2n+1) {
+    clear: both; }
+
+/**
+ * 3 Column
+ */
+.pllrs3.____ > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs3.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs3.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs3.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs3.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs3.____ > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs3.____ > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs3[class$="2__"] > .column, .pllrs3[class$="2_"] > .column, .pllrs3[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs3[class$="2__"] > .column:nth-of-type(1n), .pllrs3[class$="2_"] > .column:nth-of-type(1n), .pllrs3[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs3[class$="2__"] > .column:nth-of-type(1n+1), .pllrs3[class$="2_"] > .column:nth-of-type(1n+1), .pllrs3[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs3[class$="2__"] > .column:nth-of-type(2n), .pllrs3[class$="2_"] > .column:nth-of-type(2n), .pllrs3[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs3[class$="2__"] > .column:nth-of-type(2n+1), .pllrs3[class$="2_"] > .column:nth-of-type(2n+1), .pllrs3[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+.pllrs3[class$="1__"] > .column, .pllrs3[class$="1_"] > .column, .pllrs3[class$="1"] > .column {
+  width: 100%;
+  margin-right: 4%; }
+  .pllrs3[class$="1__"] > .column:nth-of-type(1n), .pllrs3[class$="1_"] > .column:nth-of-type(1n), .pllrs3[class$="1"] > .column:nth-of-type(1n) {
+    margin-right: 0; }
+  .pllrs3[class$="1__"] > .column:nth-of-type(1n+1), .pllrs3[class$="1_"] > .column:nth-of-type(1n+1), .pllrs3[class$="1"] > .column:nth-of-type(1n+1) {
+    clear: both; }
+
+/**
+ * 4 Column
+ */
+.pllrs4.____ > .column {
+  width: 22%;
+  margin-right: 4%; }
+  .pllrs4.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs4.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs4.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs4.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs4.____ > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs4.____ > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs4.____ > .column:nth-of-type(4n) {
+    margin-right: 0; }
+  .pllrs4.____ > .column:nth-of-type(4n+1) {
+    clear: both; }
+.pllrs4[class$="3__"] > .column, .pllrs4[class$="3_"] > .column, .pllrs4[class$="3"] > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(1n), .pllrs4[class$="3_"] > .column:nth-of-type(1n), .pllrs4[class$="3"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(1n+1), .pllrs4[class$="3_"] > .column:nth-of-type(1n+1), .pllrs4[class$="3"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(2n), .pllrs4[class$="3_"] > .column:nth-of-type(2n), .pllrs4[class$="3"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(2n+1), .pllrs4[class$="3_"] > .column:nth-of-type(2n+1), .pllrs4[class$="3"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(3n), .pllrs4[class$="3_"] > .column:nth-of-type(3n), .pllrs4[class$="3"] > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs4[class$="3__"] > .column:nth-of-type(3n+1), .pllrs4[class$="3_"] > .column:nth-of-type(3n+1), .pllrs4[class$="3"] > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs4[class$="2__"] > .column, .pllrs4[class$="2_"] > .column, .pllrs4[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs4[class$="2__"] > .column:nth-of-type(1n), .pllrs4[class$="2_"] > .column:nth-of-type(1n), .pllrs4[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs4[class$="2__"] > .column:nth-of-type(1n+1), .pllrs4[class$="2_"] > .column:nth-of-type(1n+1), .pllrs4[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs4[class$="2__"] > .column:nth-of-type(2n), .pllrs4[class$="2_"] > .column:nth-of-type(2n), .pllrs4[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs4[class$="2__"] > .column:nth-of-type(2n+1), .pllrs4[class$="2_"] > .column:nth-of-type(2n+1), .pllrs4[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+.pllrs4[class$="1__"] > .column, .pllrs4[class$="1_"] > .column, .pllrs4[class$="1"] > .column {
+  width: 100%;
+  margin-right: 4%; }
+  .pllrs4[class$="1__"] > .column:nth-of-type(1n), .pllrs4[class$="1_"] > .column:nth-of-type(1n), .pllrs4[class$="1"] > .column:nth-of-type(1n) {
+    margin-right: 0; }
+  .pllrs4[class$="1__"] > .column:nth-of-type(1n+1), .pllrs4[class$="1_"] > .column:nth-of-type(1n+1), .pllrs4[class$="1"] > .column:nth-of-type(1n+1) {
+    clear: both; }
+
+/**
+ * 5 Column
+ */
+.pllrs5.____ > .column {
+  width: 16.8%;
+  margin-right: 4%; }
+  .pllrs5.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs5.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs5.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs5.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs5.____ > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs5.____ > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs5.____ > .column:nth-of-type(4n) {
+    margin-right: 4%; }
+  .pllrs5.____ > .column:nth-of-type(4n+1) {
+    clear: none; }
+  .pllrs5.____ > .column:nth-of-type(5n) {
+    margin-right: 0; }
+  .pllrs5.____ > .column:nth-of-type(5n+1) {
+    clear: both; }
+.pllrs5[class$="3__"] > .column, .pllrs5[class$="3_"] > .column, .pllrs5[class$="3"] > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(1n), .pllrs5[class$="3_"] > .column:nth-of-type(1n), .pllrs5[class$="3"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(1n+1), .pllrs5[class$="3_"] > .column:nth-of-type(1n+1), .pllrs5[class$="3"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(2n), .pllrs5[class$="3_"] > .column:nth-of-type(2n), .pllrs5[class$="3"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(2n+1), .pllrs5[class$="3_"] > .column:nth-of-type(2n+1), .pllrs5[class$="3"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(3n), .pllrs5[class$="3_"] > .column:nth-of-type(3n), .pllrs5[class$="3"] > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs5[class$="3__"] > .column:nth-of-type(3n+1), .pllrs5[class$="3_"] > .column:nth-of-type(3n+1), .pllrs5[class$="3"] > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs5[class$="2__"] > .column, .pllrs5[class$="2_"] > .column, .pllrs5[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs5[class$="2__"] > .column:nth-of-type(1n), .pllrs5[class$="2_"] > .column:nth-of-type(1n), .pllrs5[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs5[class$="2__"] > .column:nth-of-type(1n+1), .pllrs5[class$="2_"] > .column:nth-of-type(1n+1), .pllrs5[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs5[class$="2__"] > .column:nth-of-type(2n), .pllrs5[class$="2_"] > .column:nth-of-type(2n), .pllrs5[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs5[class$="2__"] > .column:nth-of-type(2n+1), .pllrs5[class$="2_"] > .column:nth-of-type(2n+1), .pllrs5[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+
+/**
+ * 6 Column
+ */
+.pllrs6.____ > .column {
+  width: 13.33333%;
+  margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs6.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs6.____ > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs6.____ > .column:nth-of-type(4n) {
+    margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(4n+1) {
+    clear: none; }
+  .pllrs6.____ > .column:nth-of-type(5n) {
+    margin-right: 4%; }
+  .pllrs6.____ > .column:nth-of-type(5n+1) {
+    clear: none; }
+  .pllrs6.____ > .column:nth-of-type(6n) {
+    margin-right: 0; }
+  .pllrs6.____ > .column:nth-of-type(6n+1) {
+    clear: both; }
+.pllrs6[class$="4__"] > .column, .pllrs6[class$="4_"] > .column, .pllrs6[class$="4"] > .column {
+  width: 22%;
+  margin-right: 4%; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(1n), .pllrs6[class$="4_"] > .column:nth-of-type(1n), .pllrs6[class$="4"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(1n+1), .pllrs6[class$="4_"] > .column:nth-of-type(1n+1), .pllrs6[class$="4"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(2n), .pllrs6[class$="4_"] > .column:nth-of-type(2n), .pllrs6[class$="4"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(2n+1), .pllrs6[class$="4_"] > .column:nth-of-type(2n+1), .pllrs6[class$="4"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(3n), .pllrs6[class$="4_"] > .column:nth-of-type(3n), .pllrs6[class$="4"] > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(3n+1), .pllrs6[class$="4_"] > .column:nth-of-type(3n+1), .pllrs6[class$="4"] > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(4n), .pllrs6[class$="4_"] > .column:nth-of-type(4n), .pllrs6[class$="4"] > .column:nth-of-type(4n) {
+    margin-right: 0; }
+  .pllrs6[class$="4__"] > .column:nth-of-type(4n+1), .pllrs6[class$="4_"] > .column:nth-of-type(4n+1), .pllrs6[class$="4"] > .column:nth-of-type(4n+1) {
+    clear: both; }
+.pllrs6[class$="3__"] > .column, .pllrs6[class$="3_"] > .column, .pllrs6[class$="3"] > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(1n), .pllrs6[class$="3_"] > .column:nth-of-type(1n), .pllrs6[class$="3"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(1n+1), .pllrs6[class$="3_"] > .column:nth-of-type(1n+1), .pllrs6[class$="3"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(2n), .pllrs6[class$="3_"] > .column:nth-of-type(2n), .pllrs6[class$="3"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(2n+1), .pllrs6[class$="3_"] > .column:nth-of-type(2n+1), .pllrs6[class$="3"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(3n), .pllrs6[class$="3_"] > .column:nth-of-type(3n), .pllrs6[class$="3"] > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs6[class$="3__"] > .column:nth-of-type(3n+1), .pllrs6[class$="3_"] > .column:nth-of-type(3n+1), .pllrs6[class$="3"] > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs6[class$="2__"] > .column, .pllrs6[class$="2_"] > .column, .pllrs6[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs6[class$="2__"] > .column:nth-of-type(1n), .pllrs6[class$="2_"] > .column:nth-of-type(1n), .pllrs6[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs6[class$="2__"] > .column:nth-of-type(1n+1), .pllrs6[class$="2_"] > .column:nth-of-type(1n+1), .pllrs6[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs6[class$="2__"] > .column:nth-of-type(2n), .pllrs6[class$="2_"] > .column:nth-of-type(2n), .pllrs6[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs6[class$="2__"] > .column:nth-of-type(2n+1), .pllrs6[class$="2_"] > .column:nth-of-type(2n+1), .pllrs6[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+
+/**
+ * 7 Column
+ */
+.pllrs7.____ > .column {
+  width: 10.85714%;
+  margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(4n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(4n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(5n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(5n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(6n) {
+    margin-right: 4%; }
+  .pllrs7.____ > .column:nth-of-type(6n+1) {
+    clear: none; }
+  .pllrs7.____ > .column:nth-of-type(7n) {
+    margin-right: 0; }
+  .pllrs7.____ > .column:nth-of-type(7n+1) {
+    clear: both; }
+.pllrs7[class$="4__"] > .column, .pllrs7[class$="4_"] > .column, .pllrs7[class$="4"] > .column {
+  width: 22%;
+  margin-right: 4%; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(1n), .pllrs7[class$="4_"] > .column:nth-of-type(1n), .pllrs7[class$="4"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(1n+1), .pllrs7[class$="4_"] > .column:nth-of-type(1n+1), .pllrs7[class$="4"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(2n), .pllrs7[class$="4_"] > .column:nth-of-type(2n), .pllrs7[class$="4"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(2n+1), .pllrs7[class$="4_"] > .column:nth-of-type(2n+1), .pllrs7[class$="4"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(3n), .pllrs7[class$="4_"] > .column:nth-of-type(3n), .pllrs7[class$="4"] > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(3n+1), .pllrs7[class$="4_"] > .column:nth-of-type(3n+1), .pllrs7[class$="4"] > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(4n), .pllrs7[class$="4_"] > .column:nth-of-type(4n), .pllrs7[class$="4"] > .column:nth-of-type(4n) {
+    margin-right: 0; }
+  .pllrs7[class$="4__"] > .column:nth-of-type(4n+1), .pllrs7[class$="4_"] > .column:nth-of-type(4n+1), .pllrs7[class$="4"] > .column:nth-of-type(4n+1) {
+    clear: both; }
+.pllrs7[class$="3__"] > .column, .pllrs7[class$="3_"] > .column, .pllrs7[class$="3"] > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(1n), .pllrs7[class$="3_"] > .column:nth-of-type(1n), .pllrs7[class$="3"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(1n+1), .pllrs7[class$="3_"] > .column:nth-of-type(1n+1), .pllrs7[class$="3"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(2n), .pllrs7[class$="3_"] > .column:nth-of-type(2n), .pllrs7[class$="3"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(2n+1), .pllrs7[class$="3_"] > .column:nth-of-type(2n+1), .pllrs7[class$="3"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(3n), .pllrs7[class$="3_"] > .column:nth-of-type(3n), .pllrs7[class$="3"] > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs7[class$="3__"] > .column:nth-of-type(3n+1), .pllrs7[class$="3_"] > .column:nth-of-type(3n+1), .pllrs7[class$="3"] > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs7[class$="2__"] > .column, .pllrs7[class$="2_"] > .column, .pllrs7[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs7[class$="2__"] > .column:nth-of-type(1n), .pllrs7[class$="2_"] > .column:nth-of-type(1n), .pllrs7[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs7[class$="2__"] > .column:nth-of-type(1n+1), .pllrs7[class$="2_"] > .column:nth-of-type(1n+1), .pllrs7[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs7[class$="2__"] > .column:nth-of-type(2n), .pllrs7[class$="2_"] > .column:nth-of-type(2n), .pllrs7[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs7[class$="2__"] > .column:nth-of-type(2n+1), .pllrs7[class$="2_"] > .column:nth-of-type(2n+1), .pllrs7[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+
+/**
+ * 8 Column
+ */
+.pllrs8.____ > .column {
+  width: 9%;
+  margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(4n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(4n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(5n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(5n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(6n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(6n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(7n) {
+    margin-right: 4%; }
+  .pllrs8.____ > .column:nth-of-type(7n+1) {
+    clear: none; }
+  .pllrs8.____ > .column:nth-of-type(8n) {
+    margin-right: 0; }
+  .pllrs8.____ > .column:nth-of-type(8n+1) {
+    clear: both; }
+.pllrs8[class$="4__"] > .column, .pllrs8[class$="4_"] > .column, .pllrs8[class$="4"] > .column {
+  width: 22%;
+  margin-right: 4%; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(1n), .pllrs8[class$="4_"] > .column:nth-of-type(1n), .pllrs8[class$="4"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(1n+1), .pllrs8[class$="4_"] > .column:nth-of-type(1n+1), .pllrs8[class$="4"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(2n), .pllrs8[class$="4_"] > .column:nth-of-type(2n), .pllrs8[class$="4"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(2n+1), .pllrs8[class$="4_"] > .column:nth-of-type(2n+1), .pllrs8[class$="4"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(3n), .pllrs8[class$="4_"] > .column:nth-of-type(3n), .pllrs8[class$="4"] > .column:nth-of-type(3n) {
+    margin-right: 4%; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(3n+1), .pllrs8[class$="4_"] > .column:nth-of-type(3n+1), .pllrs8[class$="4"] > .column:nth-of-type(3n+1) {
+    clear: none; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(4n), .pllrs8[class$="4_"] > .column:nth-of-type(4n), .pllrs8[class$="4"] > .column:nth-of-type(4n) {
+    margin-right: 0; }
+  .pllrs8[class$="4__"] > .column:nth-of-type(4n+1), .pllrs8[class$="4_"] > .column:nth-of-type(4n+1), .pllrs8[class$="4"] > .column:nth-of-type(4n+1) {
+    clear: both; }
+.pllrs8[class$="3_"] > .column, .pllrs8[class$="3"] > .column {
+  width: 30.66667%;
+  margin-right: 4%; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(1n), .pllrs8[class$="3"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(1n+1), .pllrs8[class$="3"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(2n), .pllrs8[class$="3"] > .column:nth-of-type(2n) {
+    margin-right: 4%; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(2n+1), .pllrs8[class$="3"] > .column:nth-of-type(2n+1) {
+    clear: none; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(3n), .pllrs8[class$="3"] > .column:nth-of-type(3n) {
+    margin-right: 0; }
+  .pllrs8[class$="3_"] > .column:nth-of-type(3n+1), .pllrs8[class$="3"] > .column:nth-of-type(3n+1) {
+    clear: both; }
+.pllrs8[class$="2__"] > .column, .pllrs8[class$="2_"] > .column, .pllrs8[class$="2"] > .column {
+  width: 48%;
+  margin-right: 4%; }
+  .pllrs8[class$="2__"] > .column:nth-of-type(1n), .pllrs8[class$="2_"] > .column:nth-of-type(1n), .pllrs8[class$="2"] > .column:nth-of-type(1n) {
+    margin-right: 4%; }
+  .pllrs8[class$="2__"] > .column:nth-of-type(1n+1), .pllrs8[class$="2_"] > .column:nth-of-type(1n+1), .pllrs8[class$="2"] > .column:nth-of-type(1n+1) {
+    clear: none; }
+  .pllrs8[class$="2__"] > .column:nth-of-type(2n), .pllrs8[class$="2_"] > .column:nth-of-type(2n), .pllrs8[class$="2"] > .column:nth-of-type(2n) {
+    margin-right: 0; }
+  .pllrs8[class$="2__"] > .column:nth-of-type(2n+1), .pllrs8[class$="2_"] > .column:nth-of-type(2n+1), .pllrs8[class$="2"] > .column:nth-of-type(2n+1) {
+    clear: both; }
+
+@media screen and (min-width: 600px) {
+  /**
+   *  @file: pllrs/_tablet.scss
+   */
+  /**
+   * 2 Column
+   */
+  .pllrs2._1__ > .column, .pllrs2.__1_ > .column {
+    width: 100%;
+    margin-right: 0; }
+  .pllrs2 > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs2 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs2 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs2 > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs2 > .column:nth-of-type(2n+1) {
+      clear: both; }
+
+  /**
+   * 3 Column
+   */
+  .pllrs3 > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs3 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs3 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs3 > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs3 > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs3[class$="_2"] > .column, .pllrs3[class$="__1"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(1n), .pllrs3[class$="__1"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(1n+1), .pllrs3[class$="__1"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(2n), .pllrs3[class$="__1"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(2n+1), .pllrs3[class$="__1"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(3n), .pllrs3[class$="__1"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs3[class$="_2"] > .column:nth-of-type(3n+1), .pllrs3[class$="__1"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs3[class$="21"] > .column, .pllrs3[class$="2_1"] > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs3[class$="21"] > .column:nth-of-type(1n), .pllrs3[class$="2_1"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3[class$="21"] > .column:nth-of-type(1n+1), .pllrs3[class$="2_1"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3[class$="21"] > .column:nth-of-type(2n), .pllrs3[class$="2_1"] > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs3[class$="21"] > .column:nth-of-type(2n+1), .pllrs3[class$="2_1"] > .column:nth-of-type(2n+1) {
+      clear: both; }
+  .pllrs3[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs3[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs3[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 4 Column
+   */
+  .pllrs4 > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs4 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs4 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs4 > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs4 > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs4 > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs4 > .column:nth-of-type(4n+1) {
+      clear: both; }
+  .pllrs4[class$="__2"] > .column, .pllrs4[class$="_3"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(1n), .pllrs4[class$="_3"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(1n+1), .pllrs4[class$="_3"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(2n), .pllrs4[class$="_3"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(2n+1), .pllrs4[class$="_3"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(3n), .pllrs4[class$="_3"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(3n+1), .pllrs4[class$="_3"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(4n), .pllrs4[class$="_3"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs4[class$="__2"] > .column:nth-of-type(4n+1), .pllrs4[class$="_3"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+  .pllrs4[class$="21"] > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs4[class$="21"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4[class$="21"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4[class$="21"] > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs4[class$="21"] > .column:nth-of-type(2n+1) {
+      clear: both; }
+  .pllrs4[class$="1__"] > .column, .pllrs4[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs4[class$="1__"] > .column:nth-of-type(1n), .pllrs4[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs4[class$="1__"] > .column:nth-of-type(1n+1), .pllrs4[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 5 Column
+   */
+  .pllrs5 > .column {
+    width: 16.8%;
+    margin-right: 4%; }
+    .pllrs5 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs5 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs5 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs5 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs5 > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs5 > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs5 > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs5 > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs5 > .column:nth-of-type(5n) {
+      margin-right: 0; }
+    .pllrs5 > .column:nth-of-type(5n+1) {
+      clear: both; }
+  .pllrs5[class$="__2"] > .column, .pllrs5[class$="__3"] > .column {
+    width: 16.8%;
+    margin-right: 4%; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(1n), .pllrs5[class$="__3"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(1n+1), .pllrs5[class$="__3"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(2n), .pllrs5[class$="__3"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(2n+1), .pllrs5[class$="__3"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(3n), .pllrs5[class$="__3"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(3n+1), .pllrs5[class$="__3"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(4n), .pllrs5[class$="__3"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(4n+1), .pllrs5[class$="__3"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(5n), .pllrs5[class$="__3"] > .column:nth-of-type(5n) {
+      margin-right: 0; }
+    .pllrs5[class$="__2"] > .column:nth-of-type(5n+1), .pllrs5[class$="__3"] > .column:nth-of-type(5n+1) {
+      clear: both; }
+  .pllrs5[class$="1__"] > .column, .pllrs5[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs5[class$="1__"] > .column:nth-of-type(1n), .pllrs5[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs5[class$="1__"] > .column:nth-of-type(1n+1), .pllrs5[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 6 Column
+   */
+  .pllrs6 > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6 > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6 > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs6 > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs6 > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs6 > .column:nth-of-type(6n) {
+      margin-right: 0; }
+    .pllrs6 > .column:nth-of-type(6n+1) {
+      clear: both; }
+  .pllrs6[class$="__4"] > .column, .pllrs6[class$="__3"] > .column, .pllrs6[class$="__2"] > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(1n), .pllrs6[class$="__3"] > .column:nth-of-type(1n), .pllrs6[class$="__2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(1n+1), .pllrs6[class$="__3"] > .column:nth-of-type(1n+1), .pllrs6[class$="__2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(2n), .pllrs6[class$="__3"] > .column:nth-of-type(2n), .pllrs6[class$="__2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(2n+1), .pllrs6[class$="__3"] > .column:nth-of-type(2n+1), .pllrs6[class$="__2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(3n), .pllrs6[class$="__3"] > .column:nth-of-type(3n), .pllrs6[class$="__2"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(3n+1), .pllrs6[class$="__3"] > .column:nth-of-type(3n+1), .pllrs6[class$="__2"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(4n), .pllrs6[class$="__3"] > .column:nth-of-type(4n), .pllrs6[class$="__2"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(4n+1), .pllrs6[class$="__3"] > .column:nth-of-type(4n+1), .pllrs6[class$="__2"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(5n), .pllrs6[class$="__3"] > .column:nth-of-type(5n), .pllrs6[class$="__2"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(5n+1), .pllrs6[class$="__3"] > .column:nth-of-type(5n+1), .pllrs6[class$="__2"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(6n), .pllrs6[class$="__3"] > .column:nth-of-type(6n), .pllrs6[class$="__2"] > .column:nth-of-type(6n) {
+      margin-right: 0; }
+    .pllrs6[class$="__4"] > .column:nth-of-type(6n+1), .pllrs6[class$="__3"] > .column:nth-of-type(6n+1), .pllrs6[class$="__2"] > .column:nth-of-type(6n+1) {
+      clear: both; }
+  .pllrs6[class$="42"] > .column, .pllrs6[class$="4_2"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs6[class$="42"] > .column:nth-of-type(1n), .pllrs6[class$="4_2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42"] > .column:nth-of-type(1n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="42"] > .column:nth-of-type(2n), .pllrs6[class$="4_2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42"] > .column:nth-of-type(2n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="42"] > .column:nth-of-type(3n), .pllrs6[class$="4_2"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42"] > .column:nth-of-type(3n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6[class$="42"] > .column:nth-of-type(4n), .pllrs6[class$="4_2"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs6[class$="42"] > .column:nth-of-type(4n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+  .pllrs6[class$="31"] > .column, .pllrs6[class$="3_1"] > .column, .pllrs6[class$="32"] > .column, .pllrs6[class$="3_2"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs6[class$="31"] > .column:nth-of-type(1n), .pllrs6[class$="3_1"] > .column:nth-of-type(1n), .pllrs6[class$="32"] > .column:nth-of-type(1n), .pllrs6[class$="3_2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="31"] > .column:nth-of-type(1n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(1n+1), .pllrs6[class$="32"] > .column:nth-of-type(1n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="31"] > .column:nth-of-type(2n), .pllrs6[class$="3_1"] > .column:nth-of-type(2n), .pllrs6[class$="32"] > .column:nth-of-type(2n), .pllrs6[class$="3_2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="31"] > .column:nth-of-type(2n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(2n+1), .pllrs6[class$="32"] > .column:nth-of-type(2n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="31"] > .column:nth-of-type(3n), .pllrs6[class$="3_1"] > .column:nth-of-type(3n), .pllrs6[class$="32"] > .column:nth-of-type(3n), .pllrs6[class$="3_2"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs6[class$="31"] > .column:nth-of-type(3n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(3n+1), .pllrs6[class$="32"] > .column:nth-of-type(3n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs6[class$="1__"] > .column, .pllrs6[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs6[class$="1__"] > .column:nth-of-type(1n), .pllrs6[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs6[class$="1__"] > .column:nth-of-type(1n+1), .pllrs6[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 7 Column
+   */
+  .pllrs7 > .column {
+    width: 10.85714%;
+    margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs7 > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs7 > .column:nth-of-type(7n) {
+      margin-right: 0; }
+    .pllrs7 > .column:nth-of-type(7n+1) {
+      clear: both; }
+  .pllrs7[class$="__4"] > .column, .pllrs7[class$="__3"] > .column, .pllrs7[class$="__2"] > .column {
+    width: 10.85714%;
+    margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(1n), .pllrs7[class$="__3"] > .column:nth-of-type(1n), .pllrs7[class$="__2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(1n+1), .pllrs7[class$="__3"] > .column:nth-of-type(1n+1), .pllrs7[class$="__2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(2n), .pllrs7[class$="__3"] > .column:nth-of-type(2n), .pllrs7[class$="__2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(2n+1), .pllrs7[class$="__3"] > .column:nth-of-type(2n+1), .pllrs7[class$="__2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(3n), .pllrs7[class$="__3"] > .column:nth-of-type(3n), .pllrs7[class$="__2"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(3n+1), .pllrs7[class$="__3"] > .column:nth-of-type(3n+1), .pllrs7[class$="__2"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(4n), .pllrs7[class$="__3"] > .column:nth-of-type(4n), .pllrs7[class$="__2"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(4n+1), .pllrs7[class$="__3"] > .column:nth-of-type(4n+1), .pllrs7[class$="__2"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(5n), .pllrs7[class$="__3"] > .column:nth-of-type(5n), .pllrs7[class$="__2"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(5n+1), .pllrs7[class$="__3"] > .column:nth-of-type(5n+1), .pllrs7[class$="__2"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(6n), .pllrs7[class$="__3"] > .column:nth-of-type(6n), .pllrs7[class$="__2"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(6n+1), .pllrs7[class$="__3"] > .column:nth-of-type(6n+1), .pllrs7[class$="__2"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(7n), .pllrs7[class$="__3"] > .column:nth-of-type(7n), .pllrs7[class$="__2"] > .column:nth-of-type(7n) {
+      margin-right: 0; }
+    .pllrs7[class$="__4"] > .column:nth-of-type(7n+1), .pllrs7[class$="__3"] > .column:nth-of-type(7n+1), .pllrs7[class$="__2"] > .column:nth-of-type(7n+1) {
+      clear: both; }
+  .pllrs7[class$="1__"] > .column, .pllrs7[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs7[class$="1__"] > .column:nth-of-type(1n), .pllrs7[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs7[class$="1__"] > .column:nth-of-type(1n+1), .pllrs7[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 8 Column
+   */
+  .pllrs8 > .column {
+    width: 9%;
+    margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(7n) {
+      margin-right: 4%; }
+    .pllrs8 > .column:nth-of-type(7n+1) {
+      clear: none; }
+    .pllrs8 > .column:nth-of-type(8n) {
+      margin-right: 0; }
+    .pllrs8 > .column:nth-of-type(8n+1) {
+      clear: both; }
+  .pllrs8[class$="__4"] > .column {
+    width: 9%;
+    margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(7n) {
+      margin-right: 4%; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(7n+1) {
+      clear: none; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(8n) {
+      margin-right: 0; }
+    .pllrs8[class$="__4"] > .column:nth-of-type(8n+1) {
+      clear: both; }
+  .pllrs8[class$="4_2"] > .column, .pllrs8[class$="4_3"] > .column, .pllrs8[class$="4_"] > .column, .pllrs8[class$="42"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(1n), .pllrs8[class$="4_3"] > .column:nth-of-type(1n), .pllrs8[class$="4_"] > .column:nth-of-type(1n), .pllrs8[class$="42"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(1n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(1n+1), .pllrs8[class$="4_"] > .column:nth-of-type(1n+1), .pllrs8[class$="42"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(2n), .pllrs8[class$="4_3"] > .column:nth-of-type(2n), .pllrs8[class$="4_"] > .column:nth-of-type(2n), .pllrs8[class$="42"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(2n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(2n+1), .pllrs8[class$="4_"] > .column:nth-of-type(2n+1), .pllrs8[class$="42"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(3n), .pllrs8[class$="4_3"] > .column:nth-of-type(3n), .pllrs8[class$="4_"] > .column:nth-of-type(3n), .pllrs8[class$="42"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(3n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(3n+1), .pllrs8[class$="4_"] > .column:nth-of-type(3n+1), .pllrs8[class$="42"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(4n), .pllrs8[class$="4_3"] > .column:nth-of-type(4n), .pllrs8[class$="4_"] > .column:nth-of-type(4n), .pllrs8[class$="42"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs8[class$="4_2"] > .column:nth-of-type(4n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(4n+1), .pllrs8[class$="4_"] > .column:nth-of-type(4n+1), .pllrs8[class$="42"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+  .pllrs8[class$="3_"] > .column, .pllrs8[class$="32"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(1n), .pllrs8[class$="32"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(1n+1), .pllrs8[class$="32"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(2n), .pllrs8[class$="32"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(2n+1), .pllrs8[class$="32"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(3n), .pllrs8[class$="32"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs8[class$="3_"] > .column:nth-of-type(3n+1), .pllrs8[class$="32"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs8[class$="1__"] > .column, .pllrs8[class$="1_"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs8[class$="1__"] > .column:nth-of-type(1n), .pllrs8[class$="1_"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs8[class$="1__"] > .column:nth-of-type(1n+1), .pllrs8[class$="1_"] > .column:nth-of-type(1n+1) {
+      clear: both; } }
+@media screen and (min-width: 768px) {
+  /**
+   *  @file: pllrs/_large_tablet.scss
+   */
+  /**
+   * 2 Column
+   */
+  .pllrs2.__1_ > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs2.__1_ > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs2.__1_ > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs2.__1_ > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs2.__1_ > .column:nth-of-type(2n+1) {
+      clear: both; }
+
+  /**
+   * 3 Column
+   */
+  .pllrs3[class$="_21"] > .column, .pllrs3[class$="_1_"] > .column, .pllrs3[class$="_2_"] > .column, .pllrs3[class$="___"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(1n), .pllrs3[class$="_1_"] > .column:nth-of-type(1n), .pllrs3[class$="_2_"] > .column:nth-of-type(1n), .pllrs3[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(1n+1), .pllrs3[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs3[class$="_2_"] > .column:nth-of-type(1n+1), .pllrs3[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(2n), .pllrs3[class$="_1_"] > .column:nth-of-type(2n), .pllrs3[class$="_2_"] > .column:nth-of-type(2n), .pllrs3[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(2n+1), .pllrs3[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs3[class$="_2_"] > .column:nth-of-type(2n+1), .pllrs3[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(3n), .pllrs3[class$="_1_"] > .column:nth-of-type(3n), .pllrs3[class$="_2_"] > .column:nth-of-type(3n), .pllrs3[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs3[class$="_21"] > .column:nth-of-type(3n+1), .pllrs3[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs3[class$="_2_"] > .column:nth-of-type(3n+1), .pllrs3[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs3[class$="2__"] > .column, .pllrs3[class$="21_"] > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs3[class$="2__"] > .column:nth-of-type(1n), .pllrs3[class$="21_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3[class$="2__"] > .column:nth-of-type(1n+1), .pllrs3[class$="21_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3[class$="2__"] > .column:nth-of-type(2n), .pllrs3[class$="21_"] > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs3[class$="2__"] > .column:nth-of-type(2n+1), .pllrs3[class$="21_"] > .column:nth-of-type(2n+1) {
+      clear: both; }
+
+  /**
+   * 4 Column
+   */
+  .pllrs4[class$="_3_"] > .column, .pllrs4[class$="_2_"] > .column, .pllrs4[class$="_1_"] > .column, .pllrs4[class$="___"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(1n), .pllrs4[class$="_2_"] > .column:nth-of-type(1n), .pllrs4[class$="_1_"] > .column:nth-of-type(1n), .pllrs4[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(1n+1), .pllrs4[class$="_2_"] > .column:nth-of-type(1n+1), .pllrs4[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs4[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(2n), .pllrs4[class$="_2_"] > .column:nth-of-type(2n), .pllrs4[class$="_1_"] > .column:nth-of-type(2n), .pllrs4[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(2n+1), .pllrs4[class$="_2_"] > .column:nth-of-type(2n+1), .pllrs4[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs4[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(3n), .pllrs4[class$="_2_"] > .column:nth-of-type(3n), .pllrs4[class$="_1_"] > .column:nth-of-type(3n), .pllrs4[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(3n+1), .pllrs4[class$="_2_"] > .column:nth-of-type(3n+1), .pllrs4[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs4[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(4n), .pllrs4[class$="_2_"] > .column:nth-of-type(4n), .pllrs4[class$="_1_"] > .column:nth-of-type(4n), .pllrs4[class$="___"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs4[class$="_3_"] > .column:nth-of-type(4n+1), .pllrs4[class$="_2_"] > .column:nth-of-type(4n+1), .pllrs4[class$="_1_"] > .column:nth-of-type(4n+1), .pllrs4[class$="___"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+  .pllrs4[class$="321"] > .column, .pllrs4[class$="3_1"] > .column, .pllrs4[class$="31_"] > .column, .pllrs4[class$="3_2"] > .column, .pllrs4[class$="32_"] > .column, .pllrs4[class$="3__"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs4[class$="321"] > .column:nth-of-type(1n), .pllrs4[class$="3_1"] > .column:nth-of-type(1n), .pllrs4[class$="31_"] > .column:nth-of-type(1n), .pllrs4[class$="3_2"] > .column:nth-of-type(1n), .pllrs4[class$="32_"] > .column:nth-of-type(1n), .pllrs4[class$="3__"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4[class$="321"] > .column:nth-of-type(1n+1), .pllrs4[class$="3_1"] > .column:nth-of-type(1n+1), .pllrs4[class$="31_"] > .column:nth-of-type(1n+1), .pllrs4[class$="3_2"] > .column:nth-of-type(1n+1), .pllrs4[class$="32_"] > .column:nth-of-type(1n+1), .pllrs4[class$="3__"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4[class$="321"] > .column:nth-of-type(2n), .pllrs4[class$="3_1"] > .column:nth-of-type(2n), .pllrs4[class$="31_"] > .column:nth-of-type(2n), .pllrs4[class$="3_2"] > .column:nth-of-type(2n), .pllrs4[class$="32_"] > .column:nth-of-type(2n), .pllrs4[class$="3__"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs4[class$="321"] > .column:nth-of-type(2n+1), .pllrs4[class$="3_1"] > .column:nth-of-type(2n+1), .pllrs4[class$="31_"] > .column:nth-of-type(2n+1), .pllrs4[class$="3_2"] > .column:nth-of-type(2n+1), .pllrs4[class$="32_"] > .column:nth-of-type(2n+1), .pllrs4[class$="3__"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs4[class$="321"] > .column:nth-of-type(3n), .pllrs4[class$="3_1"] > .column:nth-of-type(3n), .pllrs4[class$="31_"] > .column:nth-of-type(3n), .pllrs4[class$="3_2"] > .column:nth-of-type(3n), .pllrs4[class$="32_"] > .column:nth-of-type(3n), .pllrs4[class$="3__"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs4[class$="321"] > .column:nth-of-type(3n+1), .pllrs4[class$="3_1"] > .column:nth-of-type(3n+1), .pllrs4[class$="31_"] > .column:nth-of-type(3n+1), .pllrs4[class$="3_2"] > .column:nth-of-type(3n+1), .pllrs4[class$="32_"] > .column:nth-of-type(3n+1), .pllrs4[class$="3__"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs4[class$="1__"] > .column {
+    width: 100%;
+    margin-right: 4%; }
+    .pllrs4[class$="1__"] > .column:nth-of-type(1n) {
+      margin-right: 0; }
+    .pllrs4[class$="1__"] > .column:nth-of-type(1n+1) {
+      clear: both; }
+
+  /**
+   * 5 Column
+   */
+  .pllrs5[class$="_3_"] > .column, .pllrs5[class$="_2_"] > .column, .pllrs5[class$="_1_"] > .column, .pllrs5[class$="___"] > .column {
+    width: 16.8%;
+    margin-right: 4%; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(1n), .pllrs5[class$="_2_"] > .column:nth-of-type(1n), .pllrs5[class$="_1_"] > .column:nth-of-type(1n), .pllrs5[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(1n+1), .pllrs5[class$="_2_"] > .column:nth-of-type(1n+1), .pllrs5[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs5[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(2n), .pllrs5[class$="_2_"] > .column:nth-of-type(2n), .pllrs5[class$="_1_"] > .column:nth-of-type(2n), .pllrs5[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(2n+1), .pllrs5[class$="_2_"] > .column:nth-of-type(2n+1), .pllrs5[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs5[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(3n), .pllrs5[class$="_2_"] > .column:nth-of-type(3n), .pllrs5[class$="_1_"] > .column:nth-of-type(3n), .pllrs5[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(3n+1), .pllrs5[class$="_2_"] > .column:nth-of-type(3n+1), .pllrs5[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs5[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(4n), .pllrs5[class$="_2_"] > .column:nth-of-type(4n), .pllrs5[class$="_1_"] > .column:nth-of-type(4n), .pllrs5[class$="___"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(4n+1), .pllrs5[class$="_2_"] > .column:nth-of-type(4n+1), .pllrs5[class$="_1_"] > .column:nth-of-type(4n+1), .pllrs5[class$="___"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(5n), .pllrs5[class$="_2_"] > .column:nth-of-type(5n), .pllrs5[class$="_1_"] > .column:nth-of-type(5n), .pllrs5[class$="___"] > .column:nth-of-type(5n) {
+      margin-right: 0; }
+    .pllrs5[class$="_3_"] > .column:nth-of-type(5n+1), .pllrs5[class$="_2_"] > .column:nth-of-type(5n+1), .pllrs5[class$="_1_"] > .column:nth-of-type(5n+1), .pllrs5[class$="___"] > .column:nth-of-type(5n+1) {
+      clear: both; }
+
+  /**
+   * 6 Column
+   */
+  .pllrs6[class$="_31"] > .column, .pllrs6[class$="_32"] > .column, .pllrs6[class$="_42"] > .column, .pllrs6[class$="_4_"] > .column, .pllrs6[class$="_3_"] > .column, .pllrs6[class$="_2_"] > .column, .pllrs6[class$="_1_"] > .column, .pllrs6[class$="___"] > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(1n), .pllrs6[class$="_32"] > .column:nth-of-type(1n), .pllrs6[class$="_42"] > .column:nth-of-type(1n), .pllrs6[class$="_4_"] > .column:nth-of-type(1n), .pllrs6[class$="_3_"] > .column:nth-of-type(1n), .pllrs6[class$="_2_"] > .column:nth-of-type(1n), .pllrs6[class$="_1_"] > .column:nth-of-type(1n), .pllrs6[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(1n+1), .pllrs6[class$="_32"] > .column:nth-of-type(1n+1), .pllrs6[class$="_42"] > .column:nth-of-type(1n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(1n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(1n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(1n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs6[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(2n), .pllrs6[class$="_32"] > .column:nth-of-type(2n), .pllrs6[class$="_42"] > .column:nth-of-type(2n), .pllrs6[class$="_4_"] > .column:nth-of-type(2n), .pllrs6[class$="_3_"] > .column:nth-of-type(2n), .pllrs6[class$="_2_"] > .column:nth-of-type(2n), .pllrs6[class$="_1_"] > .column:nth-of-type(2n), .pllrs6[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(2n+1), .pllrs6[class$="_32"] > .column:nth-of-type(2n+1), .pllrs6[class$="_42"] > .column:nth-of-type(2n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(2n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(2n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(2n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs6[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(3n), .pllrs6[class$="_32"] > .column:nth-of-type(3n), .pllrs6[class$="_42"] > .column:nth-of-type(3n), .pllrs6[class$="_4_"] > .column:nth-of-type(3n), .pllrs6[class$="_3_"] > .column:nth-of-type(3n), .pllrs6[class$="_2_"] > .column:nth-of-type(3n), .pllrs6[class$="_1_"] > .column:nth-of-type(3n), .pllrs6[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(3n+1), .pllrs6[class$="_32"] > .column:nth-of-type(3n+1), .pllrs6[class$="_42"] > .column:nth-of-type(3n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(3n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(3n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(3n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs6[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(4n), .pllrs6[class$="_32"] > .column:nth-of-type(4n), .pllrs6[class$="_42"] > .column:nth-of-type(4n), .pllrs6[class$="_4_"] > .column:nth-of-type(4n), .pllrs6[class$="_3_"] > .column:nth-of-type(4n), .pllrs6[class$="_2_"] > .column:nth-of-type(4n), .pllrs6[class$="_1_"] > .column:nth-of-type(4n), .pllrs6[class$="___"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(4n+1), .pllrs6[class$="_32"] > .column:nth-of-type(4n+1), .pllrs6[class$="_42"] > .column:nth-of-type(4n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(4n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(4n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(4n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(4n+1), .pllrs6[class$="___"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(5n), .pllrs6[class$="_32"] > .column:nth-of-type(5n), .pllrs6[class$="_42"] > .column:nth-of-type(5n), .pllrs6[class$="_4_"] > .column:nth-of-type(5n), .pllrs6[class$="_3_"] > .column:nth-of-type(5n), .pllrs6[class$="_2_"] > .column:nth-of-type(5n), .pllrs6[class$="_1_"] > .column:nth-of-type(5n), .pllrs6[class$="___"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(5n+1), .pllrs6[class$="_32"] > .column:nth-of-type(5n+1), .pllrs6[class$="_42"] > .column:nth-of-type(5n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(5n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(5n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(5n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(5n+1), .pllrs6[class$="___"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(6n), .pllrs6[class$="_32"] > .column:nth-of-type(6n), .pllrs6[class$="_42"] > .column:nth-of-type(6n), .pllrs6[class$="_4_"] > .column:nth-of-type(6n), .pllrs6[class$="_3_"] > .column:nth-of-type(6n), .pllrs6[class$="_2_"] > .column:nth-of-type(6n), .pllrs6[class$="_1_"] > .column:nth-of-type(6n), .pllrs6[class$="___"] > .column:nth-of-type(6n) {
+      margin-right: 0; }
+    .pllrs6[class$="_31"] > .column:nth-of-type(6n+1), .pllrs6[class$="_32"] > .column:nth-of-type(6n+1), .pllrs6[class$="_42"] > .column:nth-of-type(6n+1), .pllrs6[class$="_4_"] > .column:nth-of-type(6n+1), .pllrs6[class$="_3_"] > .column:nth-of-type(6n+1), .pllrs6[class$="_2_"] > .column:nth-of-type(6n+1), .pllrs6[class$="_1_"] > .column:nth-of-type(6n+1), .pllrs6[class$="___"] > .column:nth-of-type(6n+1) {
+      clear: both; }
+  .pllrs6[class$="31_"] > .column, .pllrs6[class$="3_1"] > .column, .pllrs6[class$="32_"] > .column, .pllrs6[class$="3_2"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(1n), .pllrs6[class$="3_1"] > .column:nth-of-type(1n), .pllrs6[class$="32_"] > .column:nth-of-type(1n), .pllrs6[class$="3_2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(1n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(1n+1), .pllrs6[class$="32_"] > .column:nth-of-type(1n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(2n), .pllrs6[class$="3_1"] > .column:nth-of-type(2n), .pllrs6[class$="32_"] > .column:nth-of-type(2n), .pllrs6[class$="3_2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(2n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(2n+1), .pllrs6[class$="32_"] > .column:nth-of-type(2n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(3n), .pllrs6[class$="3_1"] > .column:nth-of-type(3n), .pllrs6[class$="32_"] > .column:nth-of-type(3n), .pllrs6[class$="3_2"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs6[class$="31_"] > .column:nth-of-type(3n+1), .pllrs6[class$="3_1"] > .column:nth-of-type(3n+1), .pllrs6[class$="32_"] > .column:nth-of-type(3n+1), .pllrs6[class$="3_2"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+  .pllrs6[class$="42_"] > .column, .pllrs6[class$="4_2"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(1n), .pllrs6[class$="4_2"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(1n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(2n), .pllrs6[class$="4_2"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(2n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(3n), .pllrs6[class$="4_2"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(3n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(4n), .pllrs6[class$="4_2"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs6[class$="42_"] > .column:nth-of-type(4n+1), .pllrs6[class$="4_2"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+
+  /**
+   * 7 Column
+   */
+  .pllrs7[class$="_4_"] > .column, .pllrs7[class$="_3_"] > .column, .pllrs7[class$="_2_"] > .column, .pllrs7[class$="_1_"] > .column, .pllrs7[class$="___"] > .column {
+    width: 10.85714%;
+    margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(1n), .pllrs7[class$="_3_"] > .column:nth-of-type(1n), .pllrs7[class$="_2_"] > .column:nth-of-type(1n), .pllrs7[class$="_1_"] > .column:nth-of-type(1n), .pllrs7[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(1n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(1n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(1n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs7[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(2n), .pllrs7[class$="_3_"] > .column:nth-of-type(2n), .pllrs7[class$="_2_"] > .column:nth-of-type(2n), .pllrs7[class$="_1_"] > .column:nth-of-type(2n), .pllrs7[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(2n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(2n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(2n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs7[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(3n), .pllrs7[class$="_3_"] > .column:nth-of-type(3n), .pllrs7[class$="_2_"] > .column:nth-of-type(3n), .pllrs7[class$="_1_"] > .column:nth-of-type(3n), .pllrs7[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(3n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(3n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(3n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs7[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(4n), .pllrs7[class$="_3_"] > .column:nth-of-type(4n), .pllrs7[class$="_2_"] > .column:nth-of-type(4n), .pllrs7[class$="_1_"] > .column:nth-of-type(4n), .pllrs7[class$="___"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(4n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(4n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(4n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(4n+1), .pllrs7[class$="___"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(5n), .pllrs7[class$="_3_"] > .column:nth-of-type(5n), .pllrs7[class$="_2_"] > .column:nth-of-type(5n), .pllrs7[class$="_1_"] > .column:nth-of-type(5n), .pllrs7[class$="___"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(5n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(5n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(5n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(5n+1), .pllrs7[class$="___"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(6n), .pllrs7[class$="_3_"] > .column:nth-of-type(6n), .pllrs7[class$="_2_"] > .column:nth-of-type(6n), .pllrs7[class$="_1_"] > .column:nth-of-type(6n), .pllrs7[class$="___"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(6n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(6n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(6n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(6n+1), .pllrs7[class$="___"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(7n), .pllrs7[class$="_3_"] > .column:nth-of-type(7n), .pllrs7[class$="_2_"] > .column:nth-of-type(7n), .pllrs7[class$="_1_"] > .column:nth-of-type(7n), .pllrs7[class$="___"] > .column:nth-of-type(7n) {
+      margin-right: 0; }
+    .pllrs7[class$="_4_"] > .column:nth-of-type(7n+1), .pllrs7[class$="_3_"] > .column:nth-of-type(7n+1), .pllrs7[class$="_2_"] > .column:nth-of-type(7n+1), .pllrs7[class$="_1_"] > .column:nth-of-type(7n+1), .pllrs7[class$="___"] > .column:nth-of-type(7n+1) {
+      clear: both; }
+
+  /**
+   * 8 Column
+   */
+  .pllrs8[class$="_4_"] > .column, .pllrs8[class$="_1_"] > .column, .pllrs8[class$="___"] > .column {
+    width: 9%;
+    margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(1n), .pllrs8[class$="_1_"] > .column:nth-of-type(1n), .pllrs8[class$="___"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(1n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(1n+1), .pllrs8[class$="___"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(2n), .pllrs8[class$="_1_"] > .column:nth-of-type(2n), .pllrs8[class$="___"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(2n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(2n+1), .pllrs8[class$="___"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(3n), .pllrs8[class$="_1_"] > .column:nth-of-type(3n), .pllrs8[class$="___"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(3n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(3n+1), .pllrs8[class$="___"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(4n), .pllrs8[class$="_1_"] > .column:nth-of-type(4n), .pllrs8[class$="___"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(4n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(4n+1), .pllrs8[class$="___"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(5n), .pllrs8[class$="_1_"] > .column:nth-of-type(5n), .pllrs8[class$="___"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(5n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(5n+1), .pllrs8[class$="___"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(6n), .pllrs8[class$="_1_"] > .column:nth-of-type(6n), .pllrs8[class$="___"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(6n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(6n+1), .pllrs8[class$="___"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(7n), .pllrs8[class$="_1_"] > .column:nth-of-type(7n), .pllrs8[class$="___"] > .column:nth-of-type(7n) {
+      margin-right: 4%; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(7n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(7n+1), .pllrs8[class$="___"] > .column:nth-of-type(7n+1) {
+      clear: none; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(8n), .pllrs8[class$="_1_"] > .column:nth-of-type(8n), .pllrs8[class$="___"] > .column:nth-of-type(8n) {
+      margin-right: 0; }
+    .pllrs8[class$="_4_"] > .column:nth-of-type(8n+1), .pllrs8[class$="_1_"] > .column:nth-of-type(8n+1), .pllrs8[class$="___"] > .column:nth-of-type(8n+1) {
+      clear: both; }
+  .pllrs8[class$="62_"] > .column, .pllrs8[class$="63_"] > .column, .pllrs8[class$="632"] > .column, .pllrs8[class$="64_"] > .column, .pllrs8[class$="642"] > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(1n), .pllrs8[class$="63_"] > .column:nth-of-type(1n), .pllrs8[class$="632"] > .column:nth-of-type(1n), .pllrs8[class$="64_"] > .column:nth-of-type(1n), .pllrs8[class$="642"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(1n+1), .pllrs8[class$="63_"] > .column:nth-of-type(1n+1), .pllrs8[class$="632"] > .column:nth-of-type(1n+1), .pllrs8[class$="64_"] > .column:nth-of-type(1n+1), .pllrs8[class$="642"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(2n), .pllrs8[class$="63_"] > .column:nth-of-type(2n), .pllrs8[class$="632"] > .column:nth-of-type(2n), .pllrs8[class$="64_"] > .column:nth-of-type(2n), .pllrs8[class$="642"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(2n+1), .pllrs8[class$="63_"] > .column:nth-of-type(2n+1), .pllrs8[class$="632"] > .column:nth-of-type(2n+1), .pllrs8[class$="64_"] > .column:nth-of-type(2n+1), .pllrs8[class$="642"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(3n), .pllrs8[class$="63_"] > .column:nth-of-type(3n), .pllrs8[class$="632"] > .column:nth-of-type(3n), .pllrs8[class$="64_"] > .column:nth-of-type(3n), .pllrs8[class$="642"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(3n+1), .pllrs8[class$="63_"] > .column:nth-of-type(3n+1), .pllrs8[class$="632"] > .column:nth-of-type(3n+1), .pllrs8[class$="64_"] > .column:nth-of-type(3n+1), .pllrs8[class$="642"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(4n), .pllrs8[class$="63_"] > .column:nth-of-type(4n), .pllrs8[class$="632"] > .column:nth-of-type(4n), .pllrs8[class$="64_"] > .column:nth-of-type(4n), .pllrs8[class$="642"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(4n+1), .pllrs8[class$="63_"] > .column:nth-of-type(4n+1), .pllrs8[class$="632"] > .column:nth-of-type(4n+1), .pllrs8[class$="64_"] > .column:nth-of-type(4n+1), .pllrs8[class$="642"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(5n), .pllrs8[class$="63_"] > .column:nth-of-type(5n), .pllrs8[class$="632"] > .column:nth-of-type(5n), .pllrs8[class$="64_"] > .column:nth-of-type(5n), .pllrs8[class$="642"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(5n+1), .pllrs8[class$="63_"] > .column:nth-of-type(5n+1), .pllrs8[class$="632"] > .column:nth-of-type(5n+1), .pllrs8[class$="64_"] > .column:nth-of-type(5n+1), .pllrs8[class$="642"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(6n), .pllrs8[class$="63_"] > .column:nth-of-type(6n), .pllrs8[class$="632"] > .column:nth-of-type(6n), .pllrs8[class$="64_"] > .column:nth-of-type(6n), .pllrs8[class$="642"] > .column:nth-of-type(6n) {
+      margin-right: 0; }
+    .pllrs8[class$="62_"] > .column:nth-of-type(6n+1), .pllrs8[class$="63_"] > .column:nth-of-type(6n+1), .pllrs8[class$="632"] > .column:nth-of-type(6n+1), .pllrs8[class$="64_"] > .column:nth-of-type(6n+1), .pllrs8[class$="642"] > .column:nth-of-type(6n+1) {
+      clear: both; }
+  .pllrs8[class$="42_"] > .column, .pllrs8[class$="4_2"] > .column, .pllrs8[class$="4_3"] > .column, .pllrs8[class$="43_"] > .column, .pllrs8[class$="432"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(1n), .pllrs8[class$="4_2"] > .column:nth-of-type(1n), .pllrs8[class$="4_3"] > .column:nth-of-type(1n), .pllrs8[class$="43_"] > .column:nth-of-type(1n), .pllrs8[class$="432"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(1n+1), .pllrs8[class$="4_2"] > .column:nth-of-type(1n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(1n+1), .pllrs8[class$="43_"] > .column:nth-of-type(1n+1), .pllrs8[class$="432"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(2n), .pllrs8[class$="4_2"] > .column:nth-of-type(2n), .pllrs8[class$="4_3"] > .column:nth-of-type(2n), .pllrs8[class$="43_"] > .column:nth-of-type(2n), .pllrs8[class$="432"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(2n+1), .pllrs8[class$="4_2"] > .column:nth-of-type(2n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(2n+1), .pllrs8[class$="43_"] > .column:nth-of-type(2n+1), .pllrs8[class$="432"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(3n), .pllrs8[class$="4_2"] > .column:nth-of-type(3n), .pllrs8[class$="4_3"] > .column:nth-of-type(3n), .pllrs8[class$="43_"] > .column:nth-of-type(3n), .pllrs8[class$="432"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(3n+1), .pllrs8[class$="4_2"] > .column:nth-of-type(3n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(3n+1), .pllrs8[class$="43_"] > .column:nth-of-type(3n+1), .pllrs8[class$="432"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(4n), .pllrs8[class$="4_2"] > .column:nth-of-type(4n), .pllrs8[class$="4_3"] > .column:nth-of-type(4n), .pllrs8[class$="43_"] > .column:nth-of-type(4n), .pllrs8[class$="432"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs8[class$="42_"] > .column:nth-of-type(4n+1), .pllrs8[class$="4_2"] > .column:nth-of-type(4n+1), .pllrs8[class$="4_3"] > .column:nth-of-type(4n+1), .pllrs8[class$="43_"] > .column:nth-of-type(4n+1), .pllrs8[class$="432"] > .column:nth-of-type(4n+1) {
+      clear: both; } }
+@media screen and (min-width: 1000px) {
+  /**
+   *  @file: pllrs/_desktop.scss
+   */
+  .pllrs2[class^="_"] > .column {
+    width: 48%;
+    margin-right: 4%; }
+    .pllrs2[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs2[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs2[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .pllrs2[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: both; }
+
+  .pllrs3[class^="_"] > .column {
+    width: 30.66667%;
+    margin-right: 4%; }
+    .pllrs3[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs3[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs3[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs3[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs3[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 0; }
+    .pllrs3[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: both; }
+
+  .pllrs4[class^="_"] > .column {
+    width: 22%;
+    margin-right: 4%; }
+    .pllrs4[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs4[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs4[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs4[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs4[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs4[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs4[class^="_"] > .column:nth-of-type(4n) {
+      margin-right: 0; }
+    .pllrs4[class^="_"] > .column:nth-of-type(4n+1) {
+      clear: both; }
+
+  .pllrs5[class^="_"] > .column {
+    width: 16.8%;
+    margin-right: 4%; }
+    .pllrs5[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs5[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs5[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs5[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs5[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs5[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs5[class^="_"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs5[class^="_"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs5[class^="_"] > .column:nth-of-type(5n) {
+      margin-right: 0; }
+    .pllrs5[class^="_"] > .column:nth-of-type(5n+1) {
+      clear: both; }
+
+  .pllrs6[class^="_"] > .column {
+    width: 13.33333%;
+    margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs6[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs6[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs6[class^="_"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs6[class^="_"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs6[class^="_"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs6[class^="_"] > .column:nth-of-type(6n) {
+      margin-right: 0; }
+    .pllrs6[class^="_"] > .column:nth-of-type(6n+1) {
+      clear: both; }
+
+  .pllrs7[class^="_"] > .column {
+    width: 10.85714%;
+    margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs7[class^="_"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs7[class^="_"] > .column:nth-of-type(7n) {
+      margin-right: 0; }
+    .pllrs7[class^="_"] > .column:nth-of-type(7n+1) {
+      clear: both; }
+
+  .pllrs8[class^="_"] > .column {
+    width: 9%;
+    margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(1n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(1n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(2n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(2n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(3n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(3n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(4n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(4n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(5n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(5n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(6n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(6n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(7n) {
+      margin-right: 4%; }
+    .pllrs8[class^="_"] > .column:nth-of-type(7n+1) {
+      clear: none; }
+    .pllrs8[class^="_"] > .column:nth-of-type(8n) {
+      margin-right: 0; }
+    .pllrs8[class^="_"] > .column:nth-of-type(8n+1) {
+      clear: both; } }

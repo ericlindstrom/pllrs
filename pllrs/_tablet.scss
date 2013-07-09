@@ -5,7 +5,7 @@
 /**
  * 2 Column
  */
-._column2 {
+.pllrs2 {
 
   &._1__, &.__1_ {
     &> .column {
@@ -23,7 +23,7 @@
 /**
  * 3 Column
  */
-._column3 {
+.pllrs3 {
   &>.column { @include pllr(3); }
 
 
@@ -46,7 +46,7 @@
 /**
  * 4 Column
  */
-._column4 {
+.pllrs4 {
   &>.column { @include pllr(4); }
 
   &[class$="__2"],
@@ -68,7 +68,7 @@
 /**
  * 5 Column
  */
-._column5 {
+.pllrs5 {
   &>.column { @include pllr(5); }
 
   &[class$="__2"],
@@ -85,7 +85,7 @@
 /**
  * 6 Column
  */
-._column6 {
+.pllrs6 {
   &>.column { @include pllr(6); }
 
   &[class$="__4"],
@@ -115,7 +115,7 @@
 /**
  * 7 Column
  */
-._column7 {
+.pllrs7 {
   &>.column { @include pllr(7); }
 
   &[class$="__4"],
@@ -133,7 +133,7 @@
 /**
  * 8 Column
  */
-._column8 {
+.pllrs8 {
   &>.column { @include pllr(8); }
 
   &[class$="__4"] { 

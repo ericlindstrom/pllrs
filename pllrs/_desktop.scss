@@ -3,14 +3,14 @@
  */
 
 
-._column2[class^="_"] > .column { @include pllr(2); }
-._column3[class^="_"] > .column { @include pllr(3); }
-._column4[class^="_"] > .column { @include pllr(4); }
-._column5[class^="_"] > .column { @include pllr(5); }
-._column6[class^="_"] > .column { @include pllr(6); }
-._column7[class^="_"] > .column { @include pllr(7); }
-._column8[class^="_"] > .column { @include pllr(8); }
-//._column9[class^="_"] > .column { @include pllr(9); }
+.pllrs2[class^="_"] > .column { @include pllr(2); }
+.pllrs3[class^="_"] > .column { @include pllr(3); }
+.pllrs4[class^="_"] > .column { @include pllr(4); }
+.pllrs5[class^="_"] > .column { @include pllr(5); }
+.pllrs6[class^="_"] > .column { @include pllr(6); }
+.pllrs7[class^="_"] > .column { @include pllr(7); }
+.pllrs8[class^="_"] > .column { @include pllr(8); }
+//.pllrs9[class^="_"] > .column { @include pllr(9); }
 
 
 

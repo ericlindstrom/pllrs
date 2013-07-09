@@ -28,15 +28,15 @@ $gutter: 4%;
   &:nth-of-type(#{$columns}n+1) { clear:both $extra; }
 }
 
-._column9,
-._column8,
-._column7,
-._column6, 
-._column5, 
-._column4, 
-._column3,  
-._column2,  
-._column {
+.pllrs9,
+.pllrs8,
+.pllrs7,
+.pllrs6, 
+.pllrs5, 
+.pllrs4, 
+.pllrs3,  
+.pllrs2,  
+.pllrs {
   @include _flpr();
 
   &> .column { 
@@ -47,7 +47,7 @@ $gutter: 4%;
 /**
  *  2 Column
  */
-._column2 {
+.pllrs2 {
 
   &.____ {
     &>.column { @include pllr(2); }
@@ -57,7 +57,7 @@ $gutter: 4%;
 /**
  * 3 Column
  */
-._column3 {
+.pllrs3 {
 
   &.____ { 
     &>.column { @include pllr(3); }
@@ -81,7 +81,7 @@ $gutter: 4%;
 /**
  * 4 Column
  */
-._column4 {
+.pllrs4 {
 
   &.____ {
     &>.column { @include pllr(4); }
@@ -109,7 +109,7 @@ $gutter: 4%;
 /**
  * 5 Column
  */
-._column5 {
+.pllrs5 {
   &.____ {
     &>.column { @include pllr(5); }
   }
@@ -130,7 +130,7 @@ $gutter: 4%;
 /**
  * 6 Column
  */
-._column6 {
+.pllrs6 {
   &.____ {
     &>.column { @include pllr(6); }
   }
@@ -158,7 +158,7 @@ $gutter: 4%;
  * 7 Column
  */
 
-._column7 {
+.pllrs7 {
   &.____ {
     &>.column { @include pllr(7); }
   }
@@ -186,7 +186,7 @@ $gutter: 4%;
  * 8 Column
  */
 
-._column8 {
+.pllrs8 {
   &.____ {
     &>.column { @include pllr(8); }
   }
