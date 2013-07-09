@@ -2,15 +2,12 @@
  *  @file: pllrs/_desktop.scss
  */
 
+.pllrs2 > .column { @include pllr(2, !important); }
+.pllrs3 > .column { @include pllr(3, !important); }
+.pllrs4 > .column { @include pllr(4, !important); }
+.pllrs5 > .column { @include pllr(5, !important); }
+.pllrs6 > .column { @include pllr(6, !important); }
+.pllrs7 > .column { @include pllr(7, !important); }
+.pllrs8 > .column { @include pllr(8, !important); }
 
-.pllrs2[class^="_"] > .column { @include pllr(2); }
-.pllrs3[class^="_"] > .column { @include pllr(3); }
-.pllrs4[class^="_"] > .column { @include pllr(4); }
-.pllrs5[class^="_"] > .column { @include pllr(5); }
-.pllrs6[class^="_"] > .column { @include pllr(6); }
-.pllrs7[class^="_"] > .column { @include pllr(7); }
-.pllrs8[class^="_"] > .column { @include pllr(8); }
-//.pllrs9[class^="_"] > .column { @include pllr(9); }
-
-
-
+// Next up, remove "!important"
