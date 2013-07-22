@@ -20,17 +20,18 @@
     <section class="main">
       <div class="position">
         <div class="container">
-	  <h3 class="center">Responsive CSS Column&nbsp;Structure</h3>
+	  <h3 class="center subtitle">Responsive CSS Column&nbsp;Structure</h3>
 
 	  <section>
 	      <h3>What is&nbsp;it?</h3>
 	      <p>PLLRS is a library for responsive uniform column structure. Built considering mobile first, It handles 4 breakpoints with media queries. By default, they are:</p>
-	      <ul>
+	      <ul class="margin_btm3x">
  		<li>base (mobile first)</li>
 		<li>600px (small tablet)</li> 
 		<li>768px (large tablet)</li> 
 		<li>1000px (desktop)</li>
-</ul>
+	      </ul>
+
 	      <h3>How Do I use&nbsp;it?</h3>
 	      <p>It's simple.</p>
 	      <pre class="large">&lt;div class="pllrs4 _3_2"&gt;
@@ -41,6 +42,8 @@
 	  </section>
 	  <section class="faqs">
 	    <p>You start with <span class="pre">pllrs</span> plus the number of columns you want for a desktop site, in this case 4 (<span class="pre">pllrs4</span>).  without a secondary class (<span class="pre">_3_2</span>), this will default to 4 Columns, until it hits mobile, which will then be a single column (<span class="pre">4441</span>).</p>
+
+	    <!--<p class="center margin_btm3x"><a class="button" href="#">View A Demo here</a></p>-->
 
 	    <h3>What do the underscores mean?</h3>
 	    <p>pllrs uses a secondary class to inform the <span class="pre">columns</span> where to "fold". If a second class (beginning with underscores) is not found, it will default to <span class="pre">XXX1</span>. Otherwise, the underscore will indicate a "hold". If you wish to hold all the way from desktop to mobile use 4 underscores (<span class="pre">pllr3 <span class="kern">____</span></span>).</p>
@@ -74,20 +77,22 @@
 	    <p>You betcha.</p>
 	    <h3>Do I need to use divs?</h3>
 	    <p>Nope, feel free to use whatever HTML element you want.</p>
+	    <h3>What browsers does it support?</h3>
+	    <p><strong>pllrs works with all browsers that support CSS3 selectors and media queries</strong>.  If you need support for browsers below Internet Explorer 9, you'll want to add <a target="_blank" href="https://github.com/scottjehl/Respond">respond.js</a> and <a target="_blank" href="http://selectivizr.com/">selectivizr</a>.  These have not been tested, but will be in the future.</p>
 
-	    <h2 class="center">Still under active development.<br/>Release with demo set for July 22.</h2>
+	    <h3>Can I change the breakpoints?</h3>
+	    <p>You sure can. pllrs was built with percentages to allow for fluid scaling.  These can be changed in the pllrs/pllrs.scss file.</p>
+
+
 	  </section>
 	  <section class="margin_btm3x margin_top3x pllrs2 ___1">
-	    <p class="center"><a target="_blank" href="http://github.com/ericlindstrom/pllrs" class="button">Sneak Peek</a></p>
 
-	    <!-- 
 	    <div class="column margin_btm3x">
 	      <p class="center"><a target="_blank" href="http://github.com/ericlindstrom/pllrs" class="button">View the Repo</a></p>
 	    </div>
 	    <div class="column">
-	      <p class="center"><a href="#" class="button">Download v0.3.0</a></p>
+	      <p class="center"><a target="_blank" href="https://raw.github.com/ericlindstrom/pllrs/master/pllrs/pllrs.min.0.3.0.css" class="button">Download v0.3.0</a></p>
 	    </div>
-	    -->
 	  </section>
 
         </div>
