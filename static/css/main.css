@@ -13,7 +13,7 @@ body {
 
 a { color:#cc6633; }
 
-ul { margin:0; padding:1em; }
+ul { margin:0; padding:0 1em 1em; }
 
 .header_center { margin:0 auto; width:184px; }
 
