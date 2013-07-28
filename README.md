@@ -1,4 +1,4 @@
-pllrs 0.3.0
+pllrs 0.4.0
 ==================
 [pllrs.com](http://pllrs.com)
 
@@ -42,7 +42,7 @@ Responsive CSS Column Structure
     pllrs4 __2_ [x] (4422)
     pllrs4 ___2 [x] (4442)
     
-    5 COLUMN GRID (10)
+    5 COLUMN GRID (12)
     =============
     pllrs5 ____ [x] (5555)
     pllrs5 _1__ [x] (5111)
@@ -54,6 +54,9 @@ Responsive CSS Column Structure
     pllrs5 _2__ [x] (5222)
     pllrs5 __2_ [x] (5522)
     pllrs5 ___2 [x] (5552)
+    pllrs5 __32 [x] (5553)
+    pllrs5 _32_ [x] (5322)
+
     
     6 COLUMN GRID (22)
     =============
@@ -80,7 +83,7 @@ Responsive CSS Column Structure
     pllrs6 __31 [x] (6631)
     pllrs6 _31_ [x] (6331)
     
-    7 COLUMN GRID (13)
+    7 COLUMN GRID (17)
     =============
     pllrs7 ____ [x] (7777)
     pllrs7 _1__ [x] (7111)
@@ -95,9 +98,14 @@ Responsive CSS Column Structure
     pllrs7 _2__ [x] (7222)
     pllrs7 __2_ [x] (7722)
     pllrs7 ___2 [x] (7772)
+    pllrs7 __43 [x] (7743)
+    pllrs7 _43_ [x] (7433)
+    pllrs7 __32 [x] (7732)
+    pllrs7 _32_ [x] (7322)
+
     
     
-    8 COLUMN GRID (15)
+    8 COLUMN GRID (16)
     =============
     pllrs8 ____ [x] (8888)
     pllrs8 _1__ [x] (8111)
