@@ -2,7 +2,8 @@ body {
   font-family: 'proxima-nova', Helvetica, Arial;
   font-size:1.2em;
   text-rendering: optimizeLegibility;
-  background:#fbfbfb ;
+  background:#fbfbfb;
+  font-weight:300;
 }
 
 * {
