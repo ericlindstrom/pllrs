@@ -3,7 +3,9 @@
  *  @author: ericlindstrom
  */
 
-$gutter: 4%;
+@if not $pllrs_gutter {
+  $pllrs_gutter: 4%;
+}
 
 .column {
   -webkit-box-sizing:border-box;
@@ -18,11 +20,11 @@ $gutter: 4%;
 }
 
 @mixin pllr($columns:2, $extra:null) {
-  width:(100% - $gutter*($columns - 1)) * (1 / $columns) $extra;
-  margin-right:$gutter $extra;
+  width:(100% - $pllrs_gutter*($columns - 1)) * (1 / $columns) $extra;
+  margin-right:$pllrs_gutter $extra;
   $i:1;
   @while $i < $columns {
-    &:nth-of-type(#{$i}n) { margin-right:$gutter $extra; }
+    &:nth-of-type(#{$i}n) { margin-right:$pllrs_gutter $extra; }
     &:nth-of-type(#{$i}n+1) { clear:none $extra;}
     $i: $i + 1;
   }
