@@ -4,22 +4,32 @@
  */
 
 /*!
- *  pllrs.min.0.4.1.css | (c) 2013 ericlindstrom | www.pllrs.com
+ *  pllrs.min.0.4.2.css | (c) 2013 ericlindstrom | www.pllrs.com
  *  https://github.com/ericlindstrom/pllrs
  */
 
+/* pllrs variables */
 $pllrs_gutter: 4%;
+$pllrs_break1: 600px;
+$pllrs_break2: 768px;
+$pllrs_break3: 1000px;
 
 @import 'base';
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: $pllrs_break1) {
   @import 'tablet';
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: $pllrs_break2) {
   @import 'large_tablet';
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: $pllrs_break3) {
   @import 'desktop';
 }
+
+/** 
+ *  TODO:
+ *  Add isset checks for variables.
+ */
+

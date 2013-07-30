@@ -3,9 +3,10 @@
  *  @author: ericlindstrom
  */
 /*
- *  pllrs.min.0.4.1.css | (c) 2013 ericlindstrom | www.pllrs.com
+ *  pllrs.min.0.4.2.css | (c) 2013 ericlindstrom | www.pllrs.com
  *  https://github.com/ericlindstrom/pllrs
  */
+/* pllrs variables */
 /**
  *  @file: pllrs/_base.scss
  *  @author: ericlindstrom
@@ -1585,3 +1586,7 @@
       margin-right: 0; }
     .pllrs8._64_ > .column:nth-of-type(8n+1), .pllrs8._4_2 > .column:nth-of-type(8n+1), .pllrs8._4_3 > .column:nth-of-type(8n+1), .pllrs8._432 > .column:nth-of-type(8n+1), .pllrs8._43_ > .column:nth-of-type(8n+1), .pllrs8._42_ > .column:nth-of-type(8n+1), .pllrs8._642 > .column:nth-of-type(8n+1), .pllrs8._632 > .column:nth-of-type(8n+1), .pllrs8._63_ > .column:nth-of-type(8n+1), .pllrs8._62_ > .column:nth-of-type(8n+1), .pllrs8._4__ > .column:nth-of-type(8n+1), .pllrs8._1__ > .column:nth-of-type(8n+1) {
       clear: both; } }
+/** 
+ *  TODO:
+ *  Add isset checks for variables.
+ */
