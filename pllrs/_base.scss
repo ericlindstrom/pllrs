@@ -3,10 +3,6 @@
  *  @author: ericlindstrom
  */
 
-@if not $pllrs_gutter {
-  $pllrs_gutter: 4%;
-}
-
 .column {
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;

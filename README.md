@@ -1,4 +1,4 @@
-pllrs 0.4.1
+pllrs 0.4.2
 ==================
 [pllrs.com](http://pllrs.com)
 
