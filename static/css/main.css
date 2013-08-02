@@ -134,16 +134,16 @@ pre:after {
 
 .letter {
   float:left; position:relative;
-  width:16%;
-  margin-right:5%;
+  width:15.6%;
+  margin-right:5.5%;
   height:100px;
 }
 
 .letter:last-child { margin-right:0; }
 
-.letter .block { width:35%; height:100%; background:#2a2a2a; }
+.letter .block { width:33%; height:100%; background:#2a2a2a; }
 .letter .block.half { height:50%; }
-.letter .block.quarter { height:15%; }
+.letter .block.quarter { height:14%; }
 .letter .block.right { right:0; }
 .letter .block.bottom { bottom:0; position:absolute; }
 
