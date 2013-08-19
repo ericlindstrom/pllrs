@@ -8,14 +8,12 @@
  */
 .pllrs2 {
 
-  &._1__, &.__1_ {
+  &._111, &._211 {
     &> .column {
       @include pllr(1);
     }
   }
 
-
-  // default ___1
   &> .column {
     @include pllr(2);
   }
@@ -28,26 +26,23 @@
 .pllrs3 {
   &> .column { @include pllr(3); }
 
-  &._21_,
-  &.__1_, 
-  &._1__ {
+  &._211,
+  &._311, 
+  &._111 {
     &> .column {
       @include pllr(1);
     }
   }
 
-  &.___2 {
+  &._332 {
     &> .column { @include pllr(3); }
   }
 
-  &.__21,
-  &._2_1,
-  &.__2_ {
+  &._321,
+  &._221,
+  &._322 {
     &> .column { @include pllr(2); }
   }
-
-
-
 }
 
 /**
@@ -56,23 +51,23 @@
 .pllrs4 {
   &> .column { @include pllr(4); }
 
-  &._31_,
-  &.__1_, 
-  &._1__ {
+  &._311,
+  &._411, 
+  &._111 {
     &> .column {
       @include pllr(1);
     }
   }
 
-  &.___2,
-  &.___3 {
+  &._442,
+  &._443 {
     &> .column {
       @include pllr(4);
     }
   }
 
-  &._3_1,
-  &._3_2 {
+  &._331,
+  &._332 {
     &> .column {
       @include pllr(3);
     }
@@ -90,26 +85,26 @@
 .pllrs5 {
   &>  .column { @include pllr(5); }
 
-  &.__1_, &._1__ {
+  &._511, 
+  &._111 {
     &> .column {
       @include pllr(1);
     }
   }
 
-  &.___2,
-  &.___3 {
+  &._552,
+  &._553 {
     &> .column { @include pllr(5); }
   }
 
-  &.__32,
-  &.__3_ {
+  &._532,
+  &._533 {
     &> .column { @include pllr(3); }
   }
 
-  &._32_ {
+  &._322 {
     &> .column { @include pllr(2); }
   }
-
 }
 
 /**
@@ -118,34 +113,35 @@
 .pllrs6 {
   &>  .column { @include pllr(6); }
 
-  &._31_,
-  &.__1_, &._1__ {
+  &._311,
+  &._611, 
+  &._111 {
     &> .column {
       @include pllr(1);
     }
   }
 
-  &._4_2,
-  &.__42,
-  &.__4_ {
+  &._442,
+  &._642,
+  &._644 {
     &> .column { @include pllr(4); }
   }
 
-  &.__31,
-  &._3_1,
-  &._3_2,
-  &.__32,
-  &.__3_ {
+  &._631,
+  &._331,
+  &._332,
+  &._632,
+  &._633 {
     &> .column { @include pllr(3); }
   }
 
-  &.__2_ {
+  &._622 {
     &> .column { @include pllr(2); }
   }
 
-  &.___2,
-  &.___3,
-  &.___4 {
+  &._662,
+  &._663,
+  &._664 {
     &> .column { @include pllr(6); }
   }
 }
@@ -156,26 +152,26 @@
 .pllrs7 {
   &>  .column { @include pllr(7); }
 
-  &.__1_, 
-  &._1__ {
+  &._711, 
+  &._111 {
     &> .column {
       @include pllr(1);
     }
   }
 
-  &.___2,
-  &.___3,
-  &.___4 {
+  &._772,
+  &._773,
+  &._774 {
     &> .column { @include pllr(7); }
   }
 
-  &.__43 {
+  &._743 {
     &> .column {
       @include pllr(4);
     }
   }
 
-  &.__32 {
+  &._732 {
     &> .column {
       @include pllr(3);
     }
@@ -189,18 +185,19 @@
 .pllrs8 {
   &> .column { @include pllr(8); }
 
-  &.__1_, &._1__ {
+  &._811, 
+  &._111 {
     &>  .column {
       @include pllr(1);
     }
   }
 
-  &.___4 {
+  &._884 {
     &>  .column { @include pllr(8); }
   }
 
-  &._4_3,
-  &._4_2,
+  &._443,
+  &._442,
   &._642 {
     &> .column { @include pllr(4); }
   }
