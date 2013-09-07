@@ -9,48 +9,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <meta name="robots" content="NOINDEX, NOFOLLOW">
 
         <link rel="stylesheet" href="/static/css/normalize.css">
-	<style type="text/css">
-	  .position { margin:0 auto; width:100%; }
-	  .column { background:#fbfbfb; border:1px solid #d0d0d0; margin-bottom:20px; padding:10px;}
-	  .column:nth-child(2n+1) { background:#f0f0f0; }
-	  .favorites { line-height:2.1em; }
-	  .favorite { 
-	    text-decoration:none; letter-spacing:1px; 
-	    padding:5px; border:1px solid #e0e0e0; 
-	    background:#fbfbfb;
-
-	    color:#666; 
-	  }
-
-	  h1 { clear:both; }
-
-	  h2:after { content: ' (base)'; }
-
-	  @media screen and (min-width:600px) {
-	    .position { width:600px; }
-	    h2:after { content: ' (tablet)'; }
-
-	  }
-	  @media screen and (min-width:768px) {
-	    .position { width:768px; }
-	    h2:after { content: ' (tablet large)'; }
-
-	  }
-	  @media screen and (min-width:1000px) {
-	    .position { width:1000px; }
-	    h2:after { content: ' (desktop)'; }
-	  }
-
-
-	</style>
-	<link rel="stylesheet" href="/static/css/pllrs.min.0.4.2.css">
+	<link rel="stylesheet" href="/static/css/pllrs.min.0.5.0.css">
+        <link rel="stylesheet" href="/static/css/demo.css">
 
         <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -63,44 +28,30 @@
       <p>Class: <input type="text" id="pllrs" value="pllrs3" style="letter-spacing:1px;"/></p>
       <p>Number of Columns: <input type="text" id="columns" value="13" style="letter-spacing:1px;" maxlength="2" /></p>
       <p class="favorites">Favorites: 
-        <a href="#" class="favorite" data-class="pllrs2 ____">pllrs2&nbsp;____</a>
-	<a href="#" class="favorite" data-class="pllrs3 ___2">pllrs3&nbsp;___2</a>
-        <a href="#" class="favorite" data-class="pllrs4 _3_2">pllrs4&nbsp;_3_2</a>
-        <a href="#" class="favorite" data-class="pllrs5 _32_">pllrs5&nbsp;_32_</a>
-        <a href="#" class="favorite" data-class="pllrs6 _3_2">pllrs6&nbsp;_3_2</a>
-	<a href="#" class="favorite" data-class="pllrs6 _42_">pllrs6&nbsp;_42_</a>
+        <a href="#" class="favorite" data-class="pllrs2 _222">pllrs2&nbsp;_222</a>
+	<a href="#" class="favorite" data-class="pllrs3 _332">pllrs3&nbsp;_332</a>
+        <a href="#" class="favorite" data-class="pllrs4 _332">pllrs4&nbsp;_332</a>
+        <a href="#" class="favorite" data-class="pllrs5 _322">pllrs5&nbsp;_322</a>
+        <a href="#" class="favorite" data-class="pllrs6 _332">pllrs6&nbsp;_332</a>
+	<a href="#" class="favorite" data-class="pllrs6 _422">pllrs6&nbsp;_422</a>
       </p>
       <div id="layout" class="pllrs3">
-        <h2> </h2>
-        <div class="column">1</div>
-        <div class="column">2</div>
-        <div class="column">3</div>
-        <div class="column">4</div>
-        <div class="column">5</div>
-        <div class="column">6</div>
-        <div class="column">7</div>
-        <div class="column">8</div>
-        <div class="column">9</div>
-        <div class="column">10</div>
-        <div class="column">11</div>
-        <div class="column">12</div>
-        <div class="column">13</div>
+        <h2></h2>
       </div>
 
-      <h2>Nesting Example</h2>
-      <div class="pllrs2 ____">
+      <h2>Nesting Example </h2>
+      <div class="pllrs2 _222">
         <div class="column">1</div>
         <div class="column pllrs3">
 	  <div class="column">A</div>
 	  <div class="column">B</div>
 	  <div class="column">C</div>
 	</div>
-        <div class="column pllrs2 ____">
+        <div class="column pllrs2 _222">
 	  <div class="column">A</div>
 	  <div class="column">B</div>
 	  <div class="column">C</div>
 	  <div class="column">D</div>
-
 	</div>
         <div class="column">4</div>
         <div class="column">5</div>
@@ -109,36 +60,12 @@
 </section>
 
 
-	<script id="column_markup" type="text/template"><div class="column"><%= number+1 %></div></script>
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
 	<script src="/static/js/vendor/underscore-min.1.5.1.js"></script>
+        <script src="/static/js/demo.js"></script>
 
 	<script>
-	  $(function() {
-
-	    $('#pllrs').on('keyup', function(e) {
-	      $('#layout').attr('class', e.currentTarget.value);
-	    });
-
-	    $('.favorite').on('click', function(e) {
-	      e.preventDefault();
-	      var new_class = $(this).data('class');
-	      $('#pllrs').val(new_class);
-	      $('#layout').attr('class', new_class);
-	    });
-
-	    $('#columns').on('keyup', function(e) {
-	      var val = e.currentTarget.value > 99 ? 99 : e.currentTarget.value;
-	      $('#layout').empty();
-	      for(i=0; i < val; i++) {
-	        $('#layout').append(_.template($('#column_markup').html(), { 'number': i }));
-	      }
-	    });
-
-	  });
-
 	  // GA
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

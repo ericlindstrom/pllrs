@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="/static/css/normalize.css" rel="stylesheet" />
-    <link href="/static/css/pllrs.min.0.4.2.css" rel="stylesheet" />
+    <link href="/static/css/pllrs.min.0.5.0.css" rel="stylesheet" />
     <link href="/static/css/main.css" rel="stylesheet" />
   </head>
   <body>
@@ -57,26 +57,24 @@
 
 	      <h3>How Do I use&nbsp;it?</h3>
 	      <p>It's simple.</p>
-	      <pre class="large">&lt;div class="pllrs4 _3_2"&gt;
+	      <pre class="large">&lt;div class="pllrs4 _332"&gt;
   &lt;div class="column"&gt;&lt;/div&gt;
   &lt;div class="column"&gt;&lt;/div&gt;
   ...
 &lt;/div&gt;</pre>
 	  </section>
 	  <section class="faqs">
-	    <p>You start with <span class="pre">pllrs</span> plus the number of columns you want for a desktop site, in this case 4 (<span class="pre">pllrs4</span>).  without a secondary class (<span class="pre">_3_2</span>), this will default to 4 Columns, until it hits mobile, which will then be a single column (<span class="pre">4441</span>).</p>
-
-	    <!--<p class="center margin_btm3x"><a class="button" href="#">View A Demo here</a></p>-->
+	    <p>You start with <span class="pre">pllrs</span> plus the number of columns you want for a desktop site, in this case 4 (<span class="pre">pllrs4</span>).  without a secondary class (<span class="pre">_332</span>), this will default to 4 Columns, until it hits mobile, which will then be a single column (<span class="pre">4441</span>).</p>
 
 	    <p class="block"><a class="button center" href="/demo/">View a Demo here</a></p>
 
 	    <section>
 	      <h3>What do the underscores&nbsp;mean?</h3>
-	      <p>pllrs uses a secondary class to inform the <span class="pre">columns</span> where to "fold". If a second class (beginning with underscores) is not found, it will default to <span class="pre">XXX1</span>. Otherwise, the underscore will indicate a "hold". If you wish to hold all the way from desktop to mobile use 4 underscores (<span class="pre">pllrs3 <span class="kern">____</span></span>).</p>
+	      <p>pllrs uses a secondary class to inform the <span class="pre">columns</span> where to "fold". If a second class (beginning with underscores) is not found, it will default to <span class="pre">XXX1</span>. If you wish to hold the same column structure all the way from desktop, do the following: <span class="pre">pllrs3 _333</span>.</p>
 
 	      <h4>A Cookbook Example: 6 Column Grid</h4>
 	      <p>6 Columns at Desktop, 3 Columns at Large Tablet, 3 Columns at Small Tablet, and 2 Columns at Mobile.</p>
-	      <pre>&lt;div class="pllrs6 _3_2"&gt;
+	      <pre>&lt;div class="pllrs6 _332"&gt;
   &lt;div class="column"&gt;1&lt;/div&gt;
   &lt;div class="column"&gt;2&lt;/div&gt;
   &lt;div class="column"&gt;3&lt;/div&gt;
@@ -90,7 +88,7 @@
 
 	    </section>
 
-<div class="show_columns pllrs6 _3_2">
+<div class="show_columns pllrs6 _332">
   <div class="column">1</div>
   <div class="column">2</div>
   <div class="column">3</div>
@@ -129,13 +127,13 @@
 
 
 	  </section>
-	  <section class="margin_btm3x margin_top3x pllrs2 ___1">
+	  <section class="margin_btm3x margin_top3x pllrs2 _221">
 
 	    <div class="column margin_btm3x">
 	      <p class="center"><a target="_blank" href="http://github.com/ericlindstrom/pllrs" class="button">View the Repo</a></p>
 	    </div>
 	    <div class="column">
-	      <p class="center"><a target="_blank" href="https://raw.github.com/ericlindstrom/pllrs/release-0.4.2/pllrs.min.0.4.2.css" class="button">Download v0.4.2</a></p>
+	      <p class="center"><a target="_blank" href="https://raw.github.com/ericlindstrom/pllrs/release-0.5.0/pllrs.min.0.5.0.css" class="button">Download v0.5.0</a></p>
 	    </div>
 	  </section>
 
