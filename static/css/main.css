@@ -1,9 +1,10 @@
 body {
-  font-family: 'proxima-nova', Helvetica, Arial;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial;
   font-size:1.2em;
   text-rendering: optimizeLegibility;
   background:#fbfbfb;
   color:#2a2a2a;
+  font-weight:400;
 }
 
 * {
@@ -40,7 +41,7 @@ section,
 .subtitle { 
   margin-bottom:1.98em; 
   border:none; padding-top:14px; 
-  font-size:1.17em; text-transform:uppercase; 
+  font-size:1.1em; text-transform:uppercase; 
 }
 
 .small { font-size:.9em; }
@@ -54,7 +55,7 @@ section,
 
 
 h3 { 
-  font-weight:600;
+  font-weight:700;
   text-transform:uppercase; 
   margin:0;
   padding:20px 0 10px;
@@ -83,7 +84,7 @@ p {
   background:#FF9933;
   color:#FFF;
   padding:1em 2em;
-  font-weight:600;
+  font-weight:700;
   text-decoration:none;
   text-transform:uppercase;
   font-size:.8em;
